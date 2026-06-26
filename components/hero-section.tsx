@@ -41,13 +41,16 @@ export function HeroSection() {
             </div>
 
             <h1 className="mt-8 text-balance font-serif text-4xl font-bold leading-[1.08] text-white sm:text-5xl lg:text-6xl">
-              {t('สำนักงานกฎหมายที่พิจารณาข้อเท็จจริง เอกสาร และแนวทางคดีอย่างรอบคอบ', 'Legal counsel built on facts, documents, and careful case analysis')}
+              {t(
+                'ทนายเดชอุดม ทนายอุบลราชธานี สำนักกฎหมายเที่ยงธรรมทนายความ',
+                'Det Udom Lawyer & Ubon Ratchathani Law Firm | Tiangtham Law Office',
+              )}
             </h1>
 
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-primary-foreground/80 sm:text-xl">
               {t(
-                'ให้คำปรึกษา ร่างและตรวจเอกสาร ประเมินประเด็นกฎหมาย และดำเนินงานคดีด้วยกระบวนการที่ชัดเจน รักษาความลับของลูกความ และไม่รับประกันผลคดีเกินจริง',
-                'We provide consultation, document review, legal analysis, and case handling with a clear process, confidentiality, and no unrealistic promises.',
+                'สำนักกฎหมายเที่ยงธรรมทนายความ ให้บริการปรึกษากฎหมาย รับว่าความ และดำเนินคดีในพื้นที่เดชอุดม อุบลราชธานี รวมถึงรับว่าความอรรถคดีทั่วราชอาณาจักร ด้วยความรอบคอบและใส่ใจในข้อเท็จจริง',
+                'Tiangtham Law Office provides legal counsel, litigation, and representation in Det Udom, Ubon Ratchathani, and nationwide, ensuring confidentiality and integrity.',
               )}
             </p>
 

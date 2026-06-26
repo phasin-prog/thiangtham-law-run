@@ -9,56 +9,59 @@ import { LanguageProvider } from '@/lib/i18n'
 import { isLocale, localeCookieName } from '@/lib/i18n-config'
 import { officeContact, officeInfo } from '@/lib/data/office'
 
+const description =
+  'ทนายเดชอุดม ทนายอุบลราชธานี สำนักกฎหมายเที่ยงธรรมทนายความ ให้คำปรึกษากฎหมาย รับว่าความคดีแพ่ง อาญา ครอบครัว มรดก ที่ดิน และอรรถคดีทั่วราชอาณาจักร'
+
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.thiangthamlaw.com'),
   title: {
-    default: 'สำนักกฎหมายเที่ยงธรรมทนายความ | ปรึกษากฎหมายและรับว่าความ',
+    default: 'ทนายเดชอุดม | ทนายอุบลราชธานี | สำนักกฎหมายเที่ยงธรรมทนายความ',
     template: '%s | สำนักกฎหมายเที่ยงธรรมทนายความ',
   },
-  description:
-    'สำนักกฎหมายเที่ยงธรรมทนายความ ก่อตั้งเมื่อปี พ.ศ. 2550 นำโดยนายเกษม ฉิมพลี ให้คำปรึกษากฎหมาย รับว่าความ และดำเนินคดี พร้อมทีมทนายมากกว่า 9 คน',
+  description,
   keywords: [
-    'สำนักกฎหมาย',
-    'ทนายความ',
-    'ปรึกษากฎหมาย',
-    'รับว่าความ',
-    'คดีแพ่ง',
-    'คดีอาญา',
-    'คดีครอบครัว',
-    'คดีมรดก',
-    'คดีที่ดิน',
-    'ทนายความไทย',
+    'ทนายเดชอุดม',
+    'ทนายความเดชอุดม',
+    'ทนายอุบล',
+    'ทนายอุบลราชธานี',
+    'ทนายใกล้ฉัน',
+    'ปรึกษากฎหมายอุบลราชธานี',
+    'รับว่าความอุบลราชธานี',
+    'รับว่าความเดชอุดม',
+    'รับว่าความอรรถคดีทั่วราชอาณาจักร',
+    'สำนักกฎหมายเดชอุดม',
+    'สำนักกฎหมายอุบลราชธานี',
     'สำนักกฎหมายเที่ยงธรรมทนายความ',
     'เที่ยงธรรมทนายความ',
-    'ทนายอุบลราชธานี',
-    'สำนักกฎหมายอุบลราชธานี',
   ],
-openGraph: {
-  title: 'สำนักกฎหมายเที่ยงธรรมทนายความ | ปรึกษากฎหมายและรับว่าความ',
-  description: 'สำนักกฎหมายเที่ยงธรรมทนายความ ก่อตั้งเมื่อปี พ.ศ. 2550 ให้คำปรึกษากฎหมาย รับว่าความ และดำเนินคดี พร้อมทีมทนายคุณภาพ',
-  url: 'https://www.thiangthamlaw.com/th',
-  siteName: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
-  images: [
-    {
-      url: '/law-office-hero.png',
-      width: 1200,
-      height: 630,
-      alt: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
-    },
-  ],
-  locale: 'th_TH',
-  type: 'website',
-},
+  openGraph: {
+    title: 'ทนายเดชอุดม | ทนายอุบลราชธานี | สำนักกฎหมายเที่ยงธรรมทนายความ',
+    description,
+    url: 'https://www.thiangthamlaw.com/th',
+    siteName: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
+    images: [
+      {
+        url: '/law-office-hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
+      },
+    ],
+    locale: 'th_TH',
+    type: 'website',
+  },
   twitter: {
     card: 'summary_large_image',
-    title: 'สำนักกฎหมายเที่ยงธรรมทนายความ | ปรึกษากฎหมายและรับว่าความ',
-    description: 'สำนักกฎหมายเที่ยงธรรมทนายความ ก่อตั้งเมื่อปี พ.ศ. 2550 ให้คำปรึกษากฎหมาย รับว่าความ และดำเนินคดี พร้อมทีมทนายคุณภาพ',
+    title: 'ทนายเดชอุดม | ทนายอุบลราชธานี | สำนักกฎหมายเที่ยงธรรมทนายความ',
+    description,
     images: ['/law-office-hero.png'],
   },
   alternates: {
-  canonical: 'https://www.thiangthamlaw.com/th',
-  languages: {
-    'th-TH': 'https://www.thiangthamlaw.com/th',
-    'en-US': 'https://www.thiangthamlaw.com/en',
+    canonical: 'https://www.thiangthamlaw.com/th',
+    languages: {
+      'th-TH': 'https://www.thiangthamlaw.com/th',
+      'en-US': 'https://www.thiangthamlaw.com/en',
+      'x-default': 'https://www.thiangthamlaw.com/th',
     },
   },
 }
@@ -76,8 +79,13 @@ export default async function ThaiLayout({
     '@context': 'https://schema.org',
     '@type': 'LegalService',
     name: officeInfo.name,
-    alternateName: officeInfo.englishName,
-    description: metadata.description,
+    alternateName: [
+      'สำนักกฎหมายเดชอุดม',
+      'สำนักกฎหมายอุบลราชธานี',
+      'เที่ยงธรรมทนายความ',
+      officeInfo.englishName,
+    ],
+    description,
     url: 'https://www.thiangthamlaw.com/th',
     telephone: officeContact.phones[0],
     address: {
@@ -93,12 +101,45 @@ export default async function ThaiLayout({
       latitude: 14.904,
       longitude: 105.078,
     },
+    areaServed: [
+      {
+        '@type': 'AdministrativeArea',
+        name: 'เดชอุดม',
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'อุบลราชธานี',
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'ประเทศไทย',
+      },
+    ],
+    serviceType: [
+      'ปรึกษากฎหมาย',
+      'รับว่าความ',
+      'ดำเนินคดี',
+      'ร่างและตรวจสัญญา',
+    ],
+    knowsAbout: [
+      'ทนายเดชอุดม',
+      'ทนายความเดชอุดม',
+      'ทนายอุบล',
+      'ทนายอุบลราชธานี',
+      'ทนายใกล้ฉัน',
+      'คดีแพ่ง',
+      'คดีอาญา',
+      'คดีครอบครัว',
+      'คดีมรดก',
+      'คดีที่ดิน',
+      'รับว่าความอรรถคดีทั่วราชอาณาจักร',
+    ],
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         opens: '08:30',
-        closes: '17:00',
+        closes: '17:30',
       },
     ],
     priceRange: '$$',

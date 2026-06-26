@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/admin/', '/api/'],
     },
-    sitemap: 'https://thiangtham-law.com/sitemap.xml',
+    sitemap: 'https://www.thiangthamlaw.com/sitemap.xml',
   }
 }

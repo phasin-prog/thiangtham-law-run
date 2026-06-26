@@ -10,6 +10,7 @@ import { isLocale, localeCookieName } from '@/lib/i18n-config'
 import { officeContact, officeInfo } from '@/lib/data/office'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.thiangthamlaw.com'),
   title: {
     default: 'Thiangtham Law Office | Legal Services in Thailand',
     template: '%s | Thiangtham Law Office',
@@ -28,34 +29,35 @@ export const metadata: Metadata = {
     'Ubon Ratchathani lawyer',
     'Thiangtham Law Office',
   ],
- openGraph: {
-  title: 'Thiangtham Law Office | Legal Services in Thailand',
-  description:
-    'Legal consultation, representation, litigation, and document services for individuals and businesses in Thailand.',
-  url: 'https://www.thiangthamlaw.com/en',
-  siteName: 'Thiangtham Law Office',
-  images: [
-    {
-      url: '/law-office-hero.png',
-      width: 1200,
-      height: 630,
-      alt: 'Thiangtham Law Office Thailand',
-    },
-  ],
-  locale: 'en_US',
-  type: 'website',
-},
+  openGraph: {
+    title: 'Thiangtham Law Office | Legal Services in Thailand',
+    description:
+      'Legal consultation, representation, litigation, and document services for individuals and businesses in Thailand.',
+    url: 'https://www.thiangthamlaw.com/en',
+    siteName: 'Thiangtham Law Office',
+    images: [
+      {
+        url: '/law-office-hero.png',
+        width: 1200,
+        height: 630,
+        alt: 'Thiangtham Law Office Thailand',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
   twitter: {
     card: 'summary_large_image',
     title: 'Thiangtham Law Office | Legal Services in Thailand',
     description: 'Professional legal services, litigation, and consultation in Thailand.',
     images: ['/law-office-hero.png'],
   },
-alternates: {
-  canonical: 'https://www.thiangthamlaw.com/en',
-  languages: {
-    'th-TH': 'https://www.thiangthamlaw.com/th',
-    'en-US': 'https://www.thiangthamlaw.com/en',
+  alternates: {
+    canonical: 'https://www.thiangthamlaw.com/en',
+    languages: {
+      'th-TH': 'https://www.thiangthamlaw.com/th',
+      'en-US': 'https://www.thiangthamlaw.com/en',
+      'x-default': 'https://www.thiangthamlaw.com/th',
     },
   },
 }

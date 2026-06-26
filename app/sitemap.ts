@@ -7,6 +7,10 @@ const thRoutes = [
   '/th',
   '/th/about',
   '/th/services',
+
+  // Local SEO pages
+  '/th/lawyer-det-udom',
+
   '/th/lawyers',
   '/th/articles',
   '/th/process',
