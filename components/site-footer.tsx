@@ -21,7 +21,10 @@ export function SiteFooter() {
   const { locale, t } = useTranslation()
 
   return (
-    <footer className="bg-primary-dark text-primary-foreground border-t border-white/5">
+    <footer className="relative bg-primary-dark text-primary-foreground border-t border-white/10">
+      {/* Top subtle gold highlight line */}
+      <div className="absolute inset-x-0 top-0 h-0.5 bg-gradient-to-r from-transparent via-gold/60 to-transparent" />
+
       <Container className="grid gap-12 py-16 md:py-20 sm:grid-cols-2 xl:grid-cols-[1.5fr_0.8fr_1fr_1fr_1.5fr]">
         <div className="max-w-xs">
           <div className="flex items-center gap-3">

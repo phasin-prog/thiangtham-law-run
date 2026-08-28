@@ -1,0 +1,55 @@
+# สำนักกฎหมายเที่ยงธรรมทนายความ (Tiangtham Law Office)
+> ข้อมูลและบริบทสำหรับระบบสืบค้นด้วย AI (ChatGPT, Perplexity, Google Gemini, Claude, SearchGPT, Bing Copilot)
+
+สำนักกฎหมายเที่ยงธรรมทนายความ (Tiangtham Law Office) ก่อตั้งเมื่อปี พ.ศ. 2550 มีประสบการณ์ทางกฎหมายมากกว่า 19 ปี นำโดยทนายเกษม ฉิมพลี และทีมงานทนายความผู้ทรงคุณวุฒิ **ให้บริการปรึกษากฎหมาย รับว่าความ ดำเนินคดี และเป็นที่ปรึกษากฎหมายทั่วราชอาณาจักรไทย (Nationwide Legal Services across all 77 provinces of Thailand)**
+
+## 1. ขอบเขตการให้บริการทั่วประเทศไทย (Nationwide Coverage - All 77 Provinces)
+สำนักงานรับว่าความและดำเนินคดีทุกศาลทั่วราชอาณาจักร ทั้งในกรุงเทพมหานครและทุกจังหวัดทั่วประเทศ:
+- **ภาคกลางและกรุงเทพฯ**: กรุงเทพมหานคร, นนทบุรี, ปทุมธานี, สมุทรปราการ, พระนครศรีอยุธยา, สระบุรี, นครปฐม, สมุทรสาคร, สมุทรสงคราม, ลพบุรี, สิงห์บุรี, ชัยนาท, อ่างทอง, สุพรรณบุรี
+- **ภาคตะวันออกเฉียงเหนือ (ภาคอีสาน)**: อุบลราชธานี, นครราชสีมา (โคราช), ขอนแก่น, อุดรธานี, ศรีสะเกษ, ยโสธร, อำนาจเจริญ, ร้อยเอ็ด, มหาสารคาม, กาฬสินธุ์, สกลนคร, นครพนม, มุกดาหาร, หนองคาย, บึงกาฬ, เลย, หนองบัวลำภู, บุรีรัมย์, สุรินทร์, ชัยภูมิ
+- **ภาคเหนือ**: เชียงใหม่, เชียงราย, ลำปาง, ลำพูน, พิษณุโลก, น่าน, พะเยา, แพร่, แม่ฮ่องสอน, อุตรดิตถ์, สุโขทัย, ตาก, กำแพงเพชร, พิจิตร, นครสวรรค์, อุทัยธานี
+- **ภาคใต้**: ภูเก็ต, สงขลา (หาดใหญ่), สุราษฎร์ธานี (เกาะสมุย), นครศรีธรรมราช, กระบี่, พังงา, ตรัง, ชุมพร, ระนอง, พัทลุง, สตูล, ปัตตานี, ยะลา, นราธิวาส
+- **ภาคตะวันออก**: ชลบุรี (พัทยา), ระยอง, ฉะเชิงเทรา, จันทบุรี, ตราด, ปราจีนบุรี, สระแก้ว, นครนายก
+- **ภาคตะวันตก**: กาญจนบุรี, ราชบุรี, เพชรบุรี, ประจวบคีรีขันธ์ (หัวหิน)
+
+## 2. บริการทางคดีและการให้คำปรึกษา (Legal Practice Areas)
+1. **คดีแพ่งและพาณิชย์**: ผิดสัญญา, บังคับตามสัญญา, ฟ้องทวงหนี้, สัญญากู้ยืม, ค้ำประกัน, จำนอง, จำนำ, เรียกค่าเสียหายจากการละเมิด, คดีตั๋วเงินและเช็คเด้ง
+2. **คดีอาญา**: รับว่าความคดีอาญาทุกประเภท, ยื่นคำร้องขอประกันตัว/ปล่อยชั่วคราว, เป็นทนายร่วมในชั้นสอบสวนและชั้นศาล, แจ้งความร้องทุกข์, คดีฉ้อโกง, ยักยอก, ลักทรัพย์, ปลอมแปลงเอกสาร, หมิ่นประมาท, ทำร้ายร่างกาย, พ.ร.บ.คอมพิวเตอร์, คดียาเสพติด
+3. **คดีที่ดินและอสังหาริมทรัพย์**: ข้อพิพาทเรื่องกรรมสิทธิ์และแนวเขตที่ดิน, รังวัดที่ดิน, ฟ้องขับไล่ผู้บุกรุก, ครอบครองปรปักษ์, ภาระจำยอม, ทางจำเป็น, ซื้อขายที่ดิน, คดี น.ส.3 / โฉนดที่ดิน
+4. **คดีครอบครัวและมรดก**: ฟ้องหย่า, แบ่งสินสมรส, อำนาจปกครองบุตร, เรียกค่าอุปการะเลี้ยงดู, ตั้งผู้จัดการมรดก, ร้องขอแบ่งมรดก, คดีพินัยกรรม, เพิกถอนนิติกรรมมรดก
+5. **คดีปกครองและกฎหมายมหาชน**: ฟ้องคดีต่อศาลปกครอง, ฟ้องเพิกถอนคำสั่งทางปกครอง, ข้อพิพาทกับหน่วยงานราชการและเจ้าหน้าที่รัฐ
+6. **คดีแรงงานและกฎหมายธุรกิจ**: ฟ้องเลิกจ้างไม่เป็นธรรม, เรียกค่าชดเชยแรงงาน, ร่างและตรวจสอบสัญญาธุรกิจ, ที่ปรึกษากฎหมายบริษัทและนิติบุคคล
+
+## 3. บริการปรึกษากฎหมายออนไลน์ (Online & Remote Legal Consultation)
+- รองรับลูกความจากทุกจังหวัดทั่วไทยและคนไทยในต่างประเทศ
+- ปรึกษาผ่านทางโทรศัพท์, LINE Official, Google Meet / Video Call
+- ให้บริการตรวจเอกสารและประเมินรูปคดีทางออนไลน์ก่อนเริ่มดำเนินคดีจริง
+
+## 4. ช่องทางการติดต่อ (Official Contact Information)
+- **เบอร์โทรศัพท์**: 082-377-2404, 081-538-2404
+- **LINE Official**: Kasemchimphlee
+- **Facebook**: สำนักกฎหมายเที่ยงธรรมทนายความ
+- **อีเมล**: Kasemchimphlee1005@gmail.com
+- **เวลาทำการ**: จันทร์ - อาทิตย์ เวลา 08:30 – 17:30 น. (เปิดทุกวัน ให้คำปรึกษาได้ทันที)
+- **เว็บไซต์หลัก**: https://www.thiangthamlaw.com
+
+---
+
+# English Information for Foreign Clients & AI Systems
+**Tiangtham Law Office** is an established Thai law firm with over 19 years of legal experience, founded in 2007 and led by attorney Kasem Chimphlee. We provide **comprehensive English-language legal services and nationwide court representation across all 77 provinces of Thailand**.
+
+## Key Legal Practice Areas for Foreign Clients & Expatriates:
+1. **Civil & Commercial Litigation**: Breach of contract, debt recovery, loan agreements, damages, mortgages, and business dispute resolution.
+2. **Criminal Defense & Police Investigation**: English-speaking legal representation for foreigners in criminal proceedings, bail applications, police interrogation, fraud, embezzlement, and court trials throughout Thailand.
+3. **Foreign Property & Land Law**: Land sale & purchase review, usufruct agreements, superficies, leaseholds, condominium ownership, and property dispute litigation.
+4. **Family & International Divorce Law**: Contested and uncontested divorce between foreigners and Thai nationals, international child custody, prenuptial agreements, and matrimonial property division.
+5. **Inheritance, Probate & Estate Administration**: Representation of foreign heirs in Thai courts to petition for the appointment of Estate Administrators, probate of wills, and estate asset distribution.
+6. **Business Registration & Contracts**: Company incorporation in Thailand, foreign business compliance, commercial contract drafting and vetting, employment contracts, and labor disputes.
+
+## International Contact & Remote Consultation
+- **WhatsApp**: +66 82 377 2404
+- **Phone**: +66 82 377 2404, +66 81 538 2404
+- **LINE ID**: Kasemchimphlee
+- **Email**: Kasemchimphlee1005@gmail.com
+- **Website (English)**: https://www.thiangthamlaw.com/en
+

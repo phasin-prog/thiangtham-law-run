@@ -23,7 +23,10 @@ export function CTASection({
   return (
     <section className="bg-primary py-16 md:py-24 text-primary-foreground">
       <Container>
-        <div className="grid items-center gap-10 rounded-xl border border-white/10 bg-primary-dark/56 p-8 shadow-xl md:grid-cols-[1.1fr_0.9fr] md:p-14 lg:p-16">
+        <div className="relative overflow-hidden grid items-center gap-10 rounded-3xl border border-white/15 bg-primary-dark/80 p-8 shadow-2xl md:grid-cols-[1.1fr_0.9fr] md:p-14 lg:p-16 backdrop-blur-sm">
+          {/* Top gold accent line */}
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
+
           <div>
             <p className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-gold">
               <ShieldCheck className="size-4" aria-hidden="true" />

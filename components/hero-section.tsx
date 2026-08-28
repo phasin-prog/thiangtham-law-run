@@ -96,15 +96,15 @@ export function HeroSection() {
             <div className="overflow-hidden rounded-2xl border border-white/10 bg-primary-dark">
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="/law-office-hero.webp"
-                  alt={officeInfo.name}
+                  src="/staff/kasem.png"
+                  alt={officeInfo.headLawyer}
                   fill
                   priority
-                  quality={74}
+                  quality={85}
                   sizes="(max-width: 1024px) 100vw, 40vw"
-                  className="object-cover opacity-75"
+                  className="object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-dark via-primary-dark/30 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
                     {t('หัวหน้าสำนักงาน', 'Head Lawyer')}

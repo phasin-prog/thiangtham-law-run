@@ -5,21 +5,32 @@ export const englishHomeFaqs = [
     category: 'process' as const,
   },
   {
-    q: 'Is there a fee for an initial consultation?',
-    a: 'Fees depend on the format and duration of the consultation. Our team will inform you of the details before any appointment or service begins.',
+    q: 'Can foreigners consult a lawyer remotely from abroad or outside Ubon?',
+    a: 'Yes, we provide remote legal consultation via WhatsApp, LINE, Email, or Video Call. We regularly handle legal matters for international clients and expatriates residing anywhere in Thailand or overseas.',
     category: 'general' as const,
   },
   {
-    q: 'Can I send documents online?',
-    a: 'Yes, you can send initial copies of documents through our designated channels. Avoid sending highly sensitive information through public channels and keep the original documents.',
-    category: 'general' as const,
+    q: 'How does divorce work between a foreigner and a Thai spouse?',
+    a: 'Divorce can proceed by mutual consent at the District Office (Amphur) or through contested court litigation in the Juvenile and Family Court. We handle property division, child custody, and international asset protection.',
+    category: 'family' as const,
   },
   {
-    q: 'Does the office handle cases nationwide?',
-    a: 'We can review your case initially regardless of location. Acceptance depends on the case type, relevant courts, timing, and our team availability.',
+    q: 'How does inheritance and probate work for foreign estates in Thailand?',
+    a: 'Under Thai law, administering a deceased foreigner\'s estate (bank accounts, real estate, vehicles) requires filing a petition for the appointment of an Estate Administrator with the Thai Court. We assist foreign heirs through the entire probate court process.',
+    category: 'inheritance' as const,
+  },
+  {
+    q: 'Does your law firm handle cases nationwide in Thailand?',
+    a: 'Yes, our attorneys provide legal representation across all 77 provinces and all court jurisdictions in Thailand, including Bangkok, Phuket, Pattaya, Chiang Mai, and throughout Isan.',
     category: 'civil' as const,
   },
+  {
+    q: 'Is there a fee for an initial consultation?',
+    a: 'Fees depend on the complexity and scope of the matter. We provide transparent fee quotes before any formal engagement.',
+    category: 'general' as const,
+  },
 ]
+
 
 export const englishConsultationFaqs = [
   {

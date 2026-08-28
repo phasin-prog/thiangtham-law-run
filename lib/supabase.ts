@@ -1,5 +1,14 @@
 import { createClient } from '@supabase/supabase-js'
 
+export function isSupabaseConfigured(): boolean {
+  const url = process.env.SUPABASE_URL
+  const secretKey =
+    process.env.SUPABASE_SERVICE_SECRET ??
+    process.env.SUPABASE_SECRET_KEY ??
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  return Boolean(url && secretKey)
+}
+
 function requireEnvironmentVariable(name: string, fallbackName?: string) {
   const value = process.env[name] ?? (fallbackName ? process.env[fallbackName] : undefined)
   if (!value) {
@@ -22,3 +31,4 @@ export function getSupabaseAdmin() {
     },
   })
 }
+

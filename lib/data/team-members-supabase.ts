@@ -1,4 +1,4 @@
-import { getSupabaseAdmin } from '@/lib/supabase'
+import { getSupabaseAdmin, isSupabaseConfigured } from '@/lib/supabase'
 import { withTimeout } from '@/lib/security/request'
 import {
   getTeamMemberBySlug,
@@ -109,6 +109,10 @@ function mergeMember(member: Member, row: TeamRow | undefined): Member {
 }
 
 async function readTeamRowsFromSupabase(): Promise<TeamRowsBySource | undefined> {
+  if (!isSupabaseConfigured()) {
+    return undefined
+  }
+
   try {
     const supabase = getSupabaseAdmin()
     const [lawyers, advisors, staff] = await withTimeout(

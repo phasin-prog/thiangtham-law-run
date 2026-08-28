@@ -1,5 +1,15 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'ทนายความอุบลราชธานี ทนายเดชอุดม รับว่าความทั่วราชอาณาจักร | สำนักกฎหมายเที่ยงธรรม (19+ ปี)',
+  description:
+    'สำนักกฎหมายเที่ยงธรรมทนายความ นำโดยทนายเกษม ฉิมพลี ประสบการณ์กว่า 19 ปี ให้บริการปรึกษากฎหมาย รับว่าความ คดีแพ่ง คดีอาญา คดีที่ดิน คดีมรดก คดีครอบครัว ทั่วจังหวัดอุบลราชธานีและทั่วราชอาณาจักร',
+  alternates: {
+    canonical: 'https://www.thiangthamlaw.com/th',
+  },
+}
 import {
   ArrowRight,
   BriefcaseBusiness,

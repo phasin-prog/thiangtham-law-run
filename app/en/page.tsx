@@ -1,5 +1,15 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'English Speaking Lawyer in Thailand | Tiangtham Law Office (19+ Years)',
+  description:
+    'Licensed Thai attorneys providing English-language legal services nationwide. Specialized in civil litigation, criminal defense, foreign property, inheritance & probate, and divorce in Thailand.',
+  alternates: {
+    canonical: 'https://www.thiangthamlaw.com/en',
+  },
+}
 import {
   ArrowRight,
   BriefcaseBusiness,

@@ -37,11 +37,14 @@ export function TeamMemberCard({
     <Link
       href={getTeamProfileHref(member.slug, locale)}
       className={cn(
-        'group relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-500 hover:-translate-y-2 hover:border-gold/40 hover:shadow-2xl hover:shadow-gold/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ivory',
+        'group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border/80 bg-card transition-all duration-500 hover:-translate-y-2 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-4 focus-visible:ring-offset-ivory',
         featured && 'md:grid md:grid-cols-[0.9fr_1.1fr]',
         className,
       )}
     >
+      {/* Top subtle gold accent line */}
+      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold/0 to-transparent transition-all duration-500 group-hover:via-gold/70" />
+
       <div
         className={cn(
           'relative aspect-[4/5] w-full overflow-hidden bg-secondary',
@@ -53,30 +56,30 @@ export function TeamMemberCard({
           alt={name}
           fill
           priority={priority}
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
           sizes={featured ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 100vw, 25vw'}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </div>
 
       <div className={cn('flex flex-1 flex-col p-6', featured && 'md:justify-center md:p-10')}>
         <div>
           <h3
             className={cn(
-              'font-serif text-xl font-bold text-primary transition-colors group-hover:text-gold-ink',
+              'font-serif text-xl font-bold text-primary transition-colors group-hover:text-gold-ink leading-snug',
               featured && 'md:text-3xl',
             )}
           >
             {name}
           </h3>
           {alternateName && alternateName !== name && (
-            <p className="mt-1 text-sm font-semibold text-primary/60">
+            <p className="mt-1 text-xs font-semibold text-primary/60">
               {alternateName}
             </p>
           )}
-          <p className="mt-1 text-sm font-bold uppercase tracking-wide text-gold-ink">
+          <div className="mt-2 inline-flex w-fit items-center rounded-md bg-gold/10 px-2.5 py-1 text-xs font-bold text-gold-ink tracking-wide">
             {role}
-          </p>
+          </div>
         </div>
 
         {member.licenseNumber && (
