@@ -7,7 +7,7 @@ export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Lawyers, Advisors, and Case Coordination Team',
   description:
-    'Meet the lawyers, advisors, and case coordination team of Thiangtham Law Office working together under licensed attorneys with a structured client-care process.',
+    'Meet the lawyers, advisors, and case coordination team of Thiangtham Law Office working together with a structured client-care process, led by an attorney with 19+ years of experience.',
   alternates: {
     canonical: 'https://www.thiangthamlaw.com/en/team',
     languages: {

@@ -14,6 +14,7 @@ import {
 import { Container } from '@/components/container'
 import { PageHero } from '@/components/page-hero'
 import { CTASection } from '@/components/cta-section'
+import { CourtLinks } from '@/components/court-links'
 
 const baseUrl = 'https://www.thiangthamlaw.com'
 
@@ -296,6 +297,45 @@ export default function LawyerUbonRatchathaniPage() {
                 </ul>
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      <section className="bg-secondary/25 py-16 md:py-20">
+        <Container>
+          <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-start">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.16em] text-gold-ink">
+                Nearby Areas
+              </p>
+              <h2 className="mt-3 font-serif text-3xl font-bold text-primary">
+                อำเภออื่นในอุบลราชธานีที่สำนักงานดูแล
+              </h2>
+              <p className="mt-5 text-base leading-8 text-muted-foreground">
+                นอกจากตัวเมืองอุบลราชธานี สำนักงานยังรับปรึกษาและว่าความในอำเภอต่าง ๆ ทั่วจังหวัด
+                โดยทีมทนายประสบการณ์กว่า 19 ปี
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {[
+                  { href: '/th/lawyer-det-udom', label: 'ทนายความเดชอุดม' },
+                  { href: '/th/lawyer-warin-chamrap', label: 'ทนายความวารินชำราบ' },
+                  { href: '/th/lawyer-phibun-mangsahan', label: 'ทนายความพิบูลมังสาหาร' },
+                  { href: '/th/lawyer-muang-sam-sip', label: 'ทนายความม่วงสามสิบ' },
+                  { href: '/th/lawyer-trakan-phuet-phon', label: 'ทนายความตระการพืชผล' },
+                  { href: '/th/lawyer-khueang-nai', label: 'ทนายความเขื่องใน' },
+                ].map((district) => (
+                  <Link
+                    key={district.href}
+                    href={district.href}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-4 py-2 text-xs font-bold text-primary transition hover:border-gold/50 hover:text-gold-ink"
+                  >
+                    <MapPin className="size-3.5 text-gold" aria-hidden="true" />
+                    {district.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <CourtLinks locale="th" />
           </div>
         </Container>
       </section>

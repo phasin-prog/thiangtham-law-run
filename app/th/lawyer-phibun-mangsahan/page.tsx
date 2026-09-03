@@ -18,37 +18,34 @@ import { CourtLinks } from '@/components/court-links'
 
 const baseUrl = 'https://www.thiangthamlaw.com'
 
-const title = 'ทนายความเดชอุดม ทนายเดชอุดม รับว่าความทั่วราชอาณาจักร | สำนักกฎหมายเที่ยงธรรม (19+ ปี)'
+const title = 'ทนายความพิบูลมังสาหาร ปรึกษาฟรี รับว่าความทั่วราชอาณาจักร | สำนักกฎหมายเที่ยงธรรม (19+ ปี)'
 
 const description =
-  'ทนายความเดชอุดม ทนายเดชอุดม สำนักกฎหมายเที่ยงธรรมทนายความ นำโดยทนายเกษม ฉิมพลี ให้บริการปรึกษากฎหมาย รับว่าความ คดีแพ่ง คดีอาญา คดีที่ดิน คดีมรดก คดีครอบครัว ในอำเภอเดชอุดม อุบลราชธานี และทั่วประเทศ'
+  'ทนายความพิบูลมังสาหาร สำนักกฎหมายเที่ยงธรรมทนายความ ประสบการณ์กว่า 19 ปี ให้บริการปรึกษากฎหมายเบื้องต้นฟรี รับว่าความคดีแพ่ง คดีอาญา คดีครอบครัว คดีมรดก คดีที่ดิน ในอำเภอพิบูลมังสาหาร อุบลราชธานี และทั่วราชอาณาจักร'
 
 export const metadata: Metadata = {
   title,
   description,
   keywords: [
-    'ทนายความเดชอุดม',
-    'ทนายเดชอุดม',
-    'สำนักงานกฎหมายเดชอุดม',
-    'สำนักกฎหมายเดชอุดม',
-    'ปรึกษาทนายเดชอุดม',
-    'ทนายความอุบลราชธานี',
-    'ทนายอุบลราชธานี',
-    'ทนายคดีแพ่งเดชอุดม',
-    'ทนายคดีอาญาเดชอุดม',
-    'ทนายที่ดินเดชอุดม',
-    'ทนายมรดกเดชอุดม',
-    'ทนายฟ้องหย่าเดชอุดม',
-    'รับว่าความเดชอุดม',
+    'ทนายความพิบูลมังสาหาร',
+    'ทนายพิบูลมังสาหาร',
+    'ทนายพิบูล',
+    'หาทนายพิบูลมังสาหาร',
+    'ปรึกษาทนายพิบูลมังสาหาร',
+    'ทนายคดีแพ่งพิบูล',
+    'ทนายคดีอาญาพิบูล',
+    'ทนายมรดกพิบูล',
+    'ทนายที่ดินพิบูล',
+    'รับว่าความพิบูลมังสาหาร',
     'รับว่าความทั่วราชอาณาจักร',
   ],
   alternates: {
-    canonical: `${baseUrl}/th/lawyer-det-udom`,
+    canonical: `${baseUrl}/th/lawyer-phibun-mangsahan`,
   },
   openGraph: {
     title,
     description,
-    url: `${baseUrl}/th/lawyer-det-udom`,
+    url: `${baseUrl}/th/lawyer-phibun-mangsahan`,
     siteName: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
     locale: 'th_TH',
     type: 'website',
@@ -57,7 +54,7 @@ export const metadata: Metadata = {
         url: '/law-office-hero.png',
         width: 1200,
         height: 630,
-        alt: 'ทนายความเดชอุดม สำนักกฎหมายเที่ยงธรรมทนายความ',
+        alt: 'ทนายความพิบูลมังสาหาร สำนักกฎหมายเที่ยงธรรมทนายความ',
       },
     ],
   },
@@ -109,18 +106,27 @@ const preparationItems = [
   'จัดเตรียมคำถามหรือประเด็นหลักที่ต้องการคำแนะนำ',
 ] as const
 
-export default function LawyerDetUdomPage() {
+const nearbyDistricts = [
+  { href: '/th/lawyer-det-udom', label: 'ทนายความเดชอุดม' },
+  { href: '/th/lawyer-ubon-ratchathani', label: 'ทนายความอุบลราชธานี' },
+  { href: '/th/lawyer-warin-chamrap', label: 'ทนายความวารินชำราบ' },
+  { href: '/th/lawyer-muang-sam-sip', label: 'ทนายความม่วงสามสิบ' },
+  { href: '/th/lawyer-trakan-phuet-phon', label: 'ทนายความตระการพืชผล' },
+  { href: '/th/lawyer-khueang-nai', label: 'ทนายความเขื่องใน' },
+] as const
+
+export default function LawyerPhibunMangsahanPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
     name: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
     alternateName: 'Thiangtham Law Office',
     description,
-    url: `${baseUrl}/th/lawyer-det-udom`,
+    url: `${baseUrl}/th/lawyer-phibun-mangsahan`,
     areaServed: [
       {
         '@type': 'City',
-        name: 'เดชอุดม',
+        name: 'พิบูลมังสาหาร',
       },
       {
         '@type': 'AdministrativeArea',
@@ -135,10 +141,10 @@ export default function LawyerDetUdomPage() {
       addressCountry: 'TH',
     },
     knowsAbout: [
-      'ทนายความเดชอุดม',
-      'ทนายเดชอุดม',
-      'สำนักงานกฎหมายเดชอุดม',
-      'ปรึกษากฎหมายเดชอุดม',
+      'ทนายความพิบูลมังสาหาร',
+      'ทนายพิบูลมังสาหาร',
+      'ทนายพิบูล',
+      'ปรึกษากฎหมายพิบูลมังสาหาร',
       'ทนายอุบลราชธานี',
       'คดีแพ่ง',
       'คดีอาญา',
@@ -156,16 +162,16 @@ export default function LawyerDetUdomPage() {
       />
 
       <PageHero
-        title="ทนายความเดชอุดม"
-        description="สำนักกฎหมายเที่ยงธรรมทนายความ ตั้งอยู่ในอำเภอเดชอุดม จังหวัดอุบลราชธานี ให้บริการปรึกษากฎหมาย ตรวจข้อเท็จจริง และประเมินแนวทางคดี รวมถึงรับว่าความทั่วราชอาณาจักร"
-        crumbs={[{ href: '/th', label: 'หน้าแรก' }, { label: 'ทนายความเดชอุดม' }]}
+        title="ทนายความพิบูลมังสาหาร"
+        description="สำนักกฎหมายเที่ยงธรรมทนายความ ประสบการณ์กว่า 19 ปี ให้บริการปรึกษากฎหมายเบื้องต้นฟรี ตรวจข้อเท็จจริง และประเมินแนวทางคดีแก่ประชาชนในอำเภอพิบูลมังสาหาร พร้อมรับว่าความทั่วราชอาณาจักร"
+        crumbs={[{ href: '/th', label: 'หน้าแรก' }, { label: 'ทนายความพิบูลมังสาหาร' }]}
       />
 
       <section className="py-12 md:py-16 bg-secondary/10 border-b border-border">
         <Container>
           <div className="max-w-3xl">
             <p className="text-base leading-8 text-muted-foreground md:text-lg">
-              สำนักกฎหมายเที่ยงธรรมทนายความ ให้บริการปรึกษากฎหมายและรับว่าความในพื้นที่อำเภอเดชอุดม จังหวัดอุบลราชธานี โดยทีมงานจะร่วมวิเคราะห์ข้อเท็จจริงและตรวจพยานหลักฐานอย่างละเอียด พร้อมรักษาความลับของลูกความตามมาตรฐานจรรยาบรรณวิชาชีพทนายความ และยังคงรับว่าความอรรถคดีทั่วราชอาณาจักรตามความพร้อมและลักษณะของเรื่อง
+              อำเภอพิบูลมังสาหารเป็นอำเภอขนาดใหญ่ทางตอนเหนือของจังหวัดอุบลราชธานี มีพื้นที่เกษตรกรรมกว้างขวางและข้อพิพาทเรื่องที่ดิน มรดก และหนี้สินพบได้บ่อย สำนักงานของเราพร้อมดูแลลูกความในพิบูลมังสาหาร ทั้งการปรึกษาออนไลน์ การนัดหมาย และการดำเนินคดีในศาลจังหวัดอุบลราชธานี โดยทีมทนายประสบการณ์กว่า 19 ปี
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -196,13 +202,12 @@ export default function LawyerDetUdomPage() {
                 Local Legal Support
               </p>
               <h2 className="mt-3 font-serif text-3xl font-bold text-primary">
-                ปรึกษากฎหมายในพื้นที่เดชอุดมและอุบลราชธานี
+                ปรึกษาทนายในพื้นที่พิบูลมังสาหารและอุบลราชธานี
               </h2>
               <p className="mt-5 text-base leading-8 text-muted-foreground">
-                หากคุณอยู่ในอำเภอเดชอุดมหรือพื้นที่ใกล้เคียงในจังหวัดอุบลราชธานี
-                และต้องการปรึกษาทนายความเกี่ยวกับคดีแพ่ง คดีอาญา คดีครอบครัว
+                หากคุณอยู่ในอำเภอพิบูลมังสาหารหรือพื้นที่ใกล้เคียง และต้องการปรึกษาทนายความเกี่ยวกับคดีแพ่ง คดีอาญา คดีครอบครัว
                 คดีมรดก คดีที่ดิน หรือเอกสารทางกฎหมาย สามารถติดต่อสำนักงานเพื่อแจ้งข้อเท็จจริงเบื้องต้น
-                และเตรียมเอกสารให้ทีมงานช่วยประเมินแนวทางได้
+                และเตรียมเอกสารให้ทีมงานช่วยประเมินแนวทางได้ โดยไม่มีค่าใช้จ่ายในการประเมินเบื้องต้น
               </p>
               <p className="mt-4 text-base leading-8 text-muted-foreground">
                 การปรึกษากฎหมายที่ดีควรเริ่มจากข้อเท็จจริง เอกสาร และลำดับเหตุการณ์ที่ชัดเจน
@@ -246,7 +251,7 @@ export default function LawyerDetUdomPage() {
               งานกฎหมายที่ปรึกษาและรับดำเนินการ
             </h2>
             <p className="mt-5 text-base leading-8 text-muted-foreground">
-              ภาพรวมหมวดงานที่ผู้ติดต่อในพื้นที่เดชอุดมและอุบลราชธานีมักสอบถามสำนักงาน
+              ภาพรวมหมวดงานที่ผู้ติดต่อในพื้นที่พิบูลมังสาหารและอุบลราชธานีมักสอบถามสำนักงาน
             </p>
           </div>
 
@@ -271,60 +276,21 @@ export default function LawyerDetUdomPage() {
 
       <section className="py-16 md:py-20">
         <Container>
-          <div className="rounded-3xl border border-gold/25 bg-card p-6 md:p-8">
-            <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
-              <div>
-                <p className="text-sm font-bold uppercase tracking-[0.16em] text-gold-ink">
-                  Det Udom / Ubon Ratchathani
-                </p>
-                <h2 className="mt-3 font-serif text-3xl font-bold text-primary">
-                  ต้องการหาทนายใกล้ฉันในเดชอุดมหรืออุบลราชธานี?
-                </h2>
-                <p className="mt-5 text-base leading-8 text-muted-foreground">
-                  สามารถเริ่มจากการติดต่อสำนักงาน แจ้งพื้นที่ เหตุการณ์ และเอกสารที่มีอยู่
-                  เพื่อให้ทีมงานช่วยประเมินว่าควรเริ่มจากการเจรจา การทำหนังสือ
-                  การรวบรวมหลักฐาน หรือการดำเนินคดีตามขั้นตอนกฎหมาย
-                </p>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-white p-6">
-                <p className="text-sm font-bold text-primary">
-                  พื้นที่ให้บริการหลัก
-                </p>
-                <ul className="mt-4 space-y-3 text-sm leading-7 text-muted-foreground">
-                  <li>อำเภอเดชอุดม จังหวัดอุบลราชธานี</li>
-                  <li>พื้นที่ใกล้เคียงในจังหวัดอุบลราชธานี</li>
-                  <li>งานคดีและงานเอกสารตามขอบเขตที่สำนักงานรับดำเนินการ</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-secondary/25 py-16 md:py-20">
-        <Container>
           <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-start">
-            <div>
+            <div className="rounded-3xl border border-gold/25 bg-card p-6 md:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-gold-ink">
-                Nearby Areas
+                Phibun Mangsahan / Ubon Ratchathani
               </p>
               <h2 className="mt-3 font-serif text-3xl font-bold text-primary">
-                อำเภออื่นในอุบลราชธานีที่สำนักงานดูแล
+                ต้องการหาทนายใกล้ฉันในพิบูลมังสาหาร?
               </h2>
               <p className="mt-5 text-base leading-8 text-muted-foreground">
-                นอกจากอำเภอเดชอุดม สำนักงานยังรับปรึกษาและว่าความในอำเภอใกล้เคียงทั่วจังหวัดอุบลราชธานี
-                โดยทีมทนายประสบการณ์กว่า 19 ปี
+                สามารถเริ่มจากการติดต่อสำนักงาน แจ้งพื้นที่ เหตุการณ์ และเอกสารที่มีอยู่
+                เพื่อให้ทีมงานช่วยประเมินว่าควรเริ่มจากการเจรจา การทำหนังสือ
+                การรวบรวมหลักฐาน หรือการดำเนินคดีตามขั้นตอนกฎหมาย
               </p>
               <div className="mt-6 flex flex-wrap gap-2">
-                {[
-                  { href: '/th/lawyer-ubon-ratchathani', label: 'ทนายความอุบลราชธานี' },
-                  { href: '/th/lawyer-warin-chamrap', label: 'ทนายความวารินชำราบ' },
-                  { href: '/th/lawyer-phibun-mangsahan', label: 'ทนายความพิบูลมังสาหาร' },
-                  { href: '/th/lawyer-muang-sam-sip', label: 'ทนายความม่วงสามสิบ' },
-                  { href: '/th/lawyer-trakan-phuet-phon', label: 'ทนายความตระการพืชผล' },
-                  { href: '/th/lawyer-khueang-nai', label: 'ทนายความเขื่องใน' },
-                ].map((district) => (
+                {nearbyDistricts.map((district) => (
                   <Link
                     key={district.href}
                     href={district.href}
@@ -342,7 +308,7 @@ export default function LawyerDetUdomPage() {
       </section>
 
       <CTASection
-        title="ต้องการปรึกษาทนายความในพื้นที่เดชอุดม?"
+        title="ต้องการปรึกษาทนายความในพื้นที่พิบูลมังสาหาร?"
         description="โทร Line หรือส่งรายละเอียดเบื้องต้นมาให้สำนักงานตรวจสอบก่อนนัดหมายได้"
       />
     </main>

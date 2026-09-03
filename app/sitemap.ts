@@ -13,8 +13,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Base paths (excluding dynamic segments)
   const thBasePaths = [
     { path: '/th', priority: 1.0, changeFrequency: 'weekly' as const },
+    { path: '/th/lawyer-near-me', priority: 0.95, changeFrequency: 'weekly' as const },
     { path: '/th/lawyer-det-udom', priority: 0.95, changeFrequency: 'weekly' as const },
     { path: '/th/lawyer-ubon-ratchathani', priority: 0.95, changeFrequency: 'weekly' as const },
+    { path: '/th/lawyer-warin-chamrap', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/th/lawyer-phibun-mangsahan', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/th/lawyer-muang-sam-sip', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/th/lawyer-trakan-phuet-phon', priority: 0.9, changeFrequency: 'weekly' as const },
+    { path: '/th/lawyer-khueang-nai', priority: 0.9, changeFrequency: 'weekly' as const },
     { path: '/th/contact', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/th/services', priority: 0.8, changeFrequency: 'monthly' as const },
     { path: '/th/about', priority: 0.7, changeFrequency: 'monthly' as const },

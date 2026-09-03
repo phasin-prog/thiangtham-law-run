@@ -31,7 +31,7 @@ export default function LawyersPage() {
             </h2>
             <div className="team-gold-line my-5" />
             <p className="mt-3 leading-7 text-muted-foreground">
-              {t('ข้อมูลประวัติและเลขใบอนุญาตที่ได้รับการยืนยันแสดงตามข้อเท็จจริง เพื่อความโปร่งใสและถูกต้องของข้อมูล', 'Verified credentials and professional history are displayed for transparency and accuracy.')}
+              {t('นำโดยทนายความประสบการณ์กว่า 19 ปี แสดงประวัติและผลงานตามข้อเท็จจริง เพื่อความโปร่งใสและถูกต้องของข้อมูล', 'Led by a lawyer with 19+ years of experience; background and track record shown factually for transparency.')}
             </p>
           </div>
           

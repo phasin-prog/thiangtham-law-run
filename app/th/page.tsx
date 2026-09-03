@@ -169,6 +169,14 @@ export default function HomePage() {
                 </Link>
                 <span className="text-muted-foreground/30">|</span>
                 <Link
+                  href="/th/lawyer-near-me"
+                  className="inline-flex items-center gap-1.5 text-primary hover:text-gold transition-colors"
+                >
+                  <MapPin className="size-4 text-gold" aria-hidden="true" />
+                  ทนายใกล้ฉัน 25 อำเภอ
+                </Link>
+                <span className="text-muted-foreground/30">|</span>
+                <Link
                   href="/th/services"
                   className="inline-flex items-center gap-1.5 text-primary hover:text-gold transition-colors"
                 >
