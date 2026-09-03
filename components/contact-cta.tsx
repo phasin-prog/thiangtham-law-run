@@ -26,7 +26,7 @@ export function ContactCTA() {
               icon: MessageCircle,
               label: 'LINE',
               value: siteConfig.line,
-              href: `https://line.me/R/ti/p/~${siteConfig.line}`,
+              href: `https://line.me/R/ti/p/@${siteConfig.line}`,
             },
             {
               icon: Share2,
@@ -85,7 +85,7 @@ export function ContactCTA() {
             โทร {siteConfig.phones[1]}
           </a>
           <a
-            href={`https://line.me/R/ti/p/~${siteConfig.line}`}
+            href={`https://line.me/R/ti/p/@${siteConfig.line}`}
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-2 rounded-md border border-gold/60 px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-primary"

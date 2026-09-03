@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { cookies } from 'next/headers'
 import { FloatingContactButton } from '@/components/floating-contact-button'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { DocumentLocale } from '@/components/document-locale'
 import { MotionShell } from '@/components/motion/motion-shell'
 import { LanguageProvider } from '@/lib/i18n'
-import { isLocale, localeCookieName } from '@/lib/i18n-config'
 import { homeFaqs } from '@/lib/data/faqs'
 import { officeContact, officeInfo } from '@/lib/data/office'
 
@@ -109,14 +107,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function ThaiLayout({
+export default function ThaiLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const cookieStore = await cookies()
-  const savedLocale = cookieStore.get(localeCookieName)?.value
-  const initialLocale = isLocale(savedLocale) ? savedLocale : undefined
+  // locale มาจาก path /th โดยตรง ไม่ต้องอ่าน cookie ฝั่ง server
+  // เพื่อให้ทุกหน้า prerender เป็น static และขึ้น CDN cache ได้
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -133,7 +130,17 @@ export default async function ThaiLayout({
     ],
     description,
     url: 'https://www.thiangthamlaw.com/th',
+    image: 'https://www.thiangthamlaw.com/law-office-hero.png',
     telephone: officeContact.phones[0],
+    email: officeContact.email,
+    sameAs: [officeContact.facebookUrl, officeContact.mapUrl],
+    founder: {
+      '@type': 'Attorney',
+      name: 'นายเกษม ฉิมพลี',
+      alternateName: 'Kasem Chimphlee',
+      jobTitle: 'หัวหน้าสำนักงาน',
+      worksFor: { '@type': 'LegalService', name: officeInfo.name },
+    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: officeContact.address,
@@ -248,7 +255,7 @@ export default async function ThaiLayout({
   }
 
   return (
-    <LanguageProvider initialLocale={initialLocale ?? 'th'}>
+    <LanguageProvider initialLocale="th">
       <DocumentLocale />
       <MotionShell
         header={<SiteHeader />}

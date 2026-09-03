@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -35,7 +34,6 @@ import { ServiceCard } from '@/components/service-card'
 import { legalArticles } from '@/lib/data/articles'
 import { homeFaqs } from '@/lib/data/faqs'
 import { legalServices } from '@/lib/data/services'
-import { officeInfo } from '@/lib/data/office'
 
 const servicePreviewSlugs = ['contracts', 'business', 'tax', 'visa-foreign-documents', 'labor'] as const
 const casePreviewItems = [
@@ -338,67 +336,6 @@ export default function HomePage() {
                 <p className="mt-4 text-sm font-medium leading-7 text-primary-foreground/85">{point}</p>
               </div>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 md:py-20">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-            <div>
-              <SectionHeading
-                title={officeInfo.headLawyer}
-                description="หัวหน้าสำนักงานที่ดูแลทิศทางการทำงานของสำนักงาน และประเมินแนวทางของแต่ละเรื่องด้วยข้อเท็จจริงและเอกสารที่เกี่ยวข้อง"
-              />
-              <div className="mt-8 rounded-2xl border border-gold/25 bg-card p-6">
-                <p className="text-sm font-semibold text-gold-ink">หัวหน้าสำนักงาน</p>
-                <p className="mt-3 text-base leading-8 text-muted-foreground">
-                  {officeInfo.headLawyer} มีประสบการณ์ด้านงานกฎหมายมากกว่า 19 ปี
-                  และมีบทบาทในการกำหนดแนวทางการทำงานร่วมกับทีมทนายความและฝ่ายสำนักงาน
-                  โดยเน้นการตรวจข้อเท็จจริง การเตรียมเอกสาร และการสื่อสารขั้นตอนให้ชัดเจน
-                </p>
-                <Link
-                  href="/th/team/kasem-chimphlee"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary transition hover:text-gold-ink"
-                >
-                  ดูบทบาทและประวัติ
-                  <ArrowRight className="size-4" aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-            <div className="rounded-3xl border border-border bg-white p-5 shadow-sm">
-              <div className="overflow-hidden rounded-2xl">
-                <div className="relative aspect-[4/5]">
-                  <Image
-                    src="/law-office-hero.webp"
-                    alt={officeInfo.headLawyer}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
-                      Head Lawyer
-                    </p>
-                    <h2 className="mt-2 font-serif text-2xl font-bold">{officeInfo.headLawyer}</h2>
-                    <p className="mt-2 text-sm leading-7 text-white/80">
-                      กำกับแนวทางงานคดีและการให้คำปรึกษาอย่างเป็นระบบ
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-xl border border-border bg-secondary/40 p-4">
-                  <p className="text-xs font-bold text-muted-foreground">ประสบการณ์</p>
-                  <p className="mt-1 font-serif text-lg font-bold text-primary">มากกว่า 19 ปี</p>
-                </div>
-                <div className="rounded-xl border border-border bg-secondary/40 p-4">
-                  <p className="text-xs font-bold text-muted-foreground">ใบอนุญาต</p>
-                  <p className="mt-1 font-serif text-lg font-bold text-primary">ตามข้อมูลที่มีอยู่</p>
-                </div>
-              </div>
-            </div>
           </div>
         </Container>
       </section>

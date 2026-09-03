@@ -7,7 +7,7 @@
 @theme inline {
   --font-heading: var(--font-serif);
   --font-sans: Tahoma, 'Leelawadee UI', Arial, sans-serif;
-  --font-serif: 'Sarabun', 'Th Sarabun New', 'Leelawadee UI', Tahoma, serif;
+  --font-serif: var(--font-sarabun), 'Sarabun', 'Th Sarabun New', 'Leelawadee UI', Tahoma, serif;
   --font-mono: Consolas, 'Courier New', monospace;
 
   /* Tailwind neutral overrides: avoid pure white/black utilities. */

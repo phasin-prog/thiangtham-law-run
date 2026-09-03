@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 const sessionStorageKey = 'site_analytics_session_id'
 const heartbeatIntervalMs = 60_000
 
-type AnalyticsEvent = 'pageview' | 'heartbeat'
+type AnalyticsEvent = 'pageview' | 'heartbeat' | 'tel_click' | 'line_click' | 'consult_submit'
 
 function isTrackablePath(pathname: string) {
   return (
@@ -56,9 +56,36 @@ function sendAnalyticsEvent(path: string, event: AnalyticsEvent) {
   })
 }
 
+/** ส่ง event ประเภท conversion (เช่น ส่งฟอร์มสำเร็จ) ด้วย path ปัจจุบัน */
+export function trackConversion(event: Extract<AnalyticsEvent, 'consult_submit'>) {
+  try {
+    sendAnalyticsEvent(window.location.pathname, event)
+  } catch {
+    // การวัดผลต้องไม่กระทบผู้ใช้
+  }
+}
+
 export function AnalyticsTracker() {
   const pathname = usePathname()
   const lastTrackedPath = useRef<string | null>(null)
+
+  // วัดคลิกช่องทางติดต่อ (โทร / LINE) ทุกหน้า — ใช้วัดว่าหน้าไหนขายได้
+  useEffect(() => {
+    function handleClick(event: MouseEvent) {
+      const target = event.target
+      if (!(target instanceof Element)) return
+      const anchor = target.closest('a[href]')
+      if (!(anchor instanceof HTMLAnchorElement)) return
+      const href = anchor.getAttribute('href') ?? ''
+      if (href.startsWith('tel:')) {
+        sendAnalyticsEvent(window.location.pathname, 'tel_click')
+      } else if (href.includes('line.me')) {
+        sendAnalyticsEvent(window.location.pathname, 'line_click')
+      }
+    }
+    document.addEventListener('click', handleClick)
+    return () => document.removeEventListener('click', handleClick)
+  }, [])
 
   useEffect(() => {
     if (!pathname || !isTrackablePath(pathname)) return

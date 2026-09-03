@@ -13,7 +13,7 @@ export default function EnglishContactPage() {
   
   const contacts = [
     { icon: Phone, label: t('โทรศัพท์', 'Phone'), value: officeContact.phones.join(' / '), href: `tel:${officeContact.phones[0].replace(/-/g, '')}` },
-    { icon: MessageCircle, label: 'Line', value: officeContact.line, href: `https://line.me/R/ti/p/~${officeContact.line}` },
+    { icon: MessageCircle, label: 'Line', value: officeContact.line, href: officeContact.lineUrl },
     { icon: Mail, label: 'Email', value: officeContact.email, href: `mailto:${officeContact.email}` },
     { icon: Clock3, label: t('เวลาทำการ', 'Office Hours'), value: officeContact.hoursEn },
   ]

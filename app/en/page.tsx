@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -35,7 +34,6 @@ import { ServiceCard } from '@/components/service-card'
 import { englishLegalArticles } from '@/lib/data/articles-en'
 import { englishHomeFaqs } from '@/lib/data/faqs-en'
 import { englishLegalServices } from '@/lib/data/services-en'
-import { officeInfo } from '@/lib/data/office'
 
 const servicePreviewSlugs = ['contracts', 'business', 'tax', 'visa-foreign-documents', 'labor'] as const
 const casePreviewItems = [
@@ -265,66 +263,6 @@ export default function EnglishHomePage() {
                 <p className="mt-4 text-sm font-medium leading-7 text-primary-foreground/85">{point}</p>
               </div>
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-16 md:py-20">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-            <div>
-              <SectionHeading
-                title={officeInfo.headLawyer}
-                description="The head lawyer sets the office direction and reviews each matter through the lens of facts, records, and the legal issues involved."
-              />
-              <div className="mt-8 rounded-2xl border border-gold/25 bg-card p-6">
-                <p className="text-sm font-semibold text-gold-ink">Head Lawyer</p>
-                <p className="mt-3 text-base leading-8 text-muted-foreground">
-                  {officeInfo.headLawyer} has more than 19 years of legal practice experience and helps guide the
-                  office’s work with a focus on document review, issue analysis, and clear case planning.
-                </p>
-                <Link
-                  href="/en/team/kasem-chimphlee"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary transition hover:text-gold-ink"
-                >
-                  View role and profile
-                  <ArrowRight className="size-4" aria-hidden="true" />
-                </Link>
-              </div>
-            </div>
-            <div className="rounded-3xl border border-border bg-white p-5 shadow-sm">
-              <div className="overflow-hidden rounded-2xl">
-                <div className="relative aspect-[4/5]">
-                  <Image
-                    src="/law-office-hero.webp"
-                    alt={officeInfo.headLawyer}
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/20 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-                    <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">
-                      Head Lawyer
-                    </p>
-                    <h2 className="mt-2 font-serif text-2xl font-bold">{officeInfo.headLawyer}</h2>
-                    <p className="mt-2 text-sm leading-7 text-white/80">
-                      Coordinates legal work with a calm and systematic approach
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4 grid gap-3 sm:grid-cols-2">
-                <div className="rounded-xl border border-border bg-secondary/40 p-4">
-                  <p className="text-xs font-bold text-muted-foreground">Experience</p>
-                  <p className="mt-1 font-serif text-lg font-bold text-primary">19+ years</p>
-                </div>
-                <div className="rounded-xl border border-border bg-secondary/40 p-4">
-                  <p className="text-xs font-bold text-muted-foreground">Founded</p>
-                  <p className="mt-1 font-serif text-lg font-bold text-primary">2007</p>
-                </div>
-              </div>
-            </div>
           </div>
         </Container>
       </section>

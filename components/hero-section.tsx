@@ -63,7 +63,7 @@ export function HeroSection() {
                 {t('โทรหาเรา', 'Call Us')}
               </a>
               <a
-                href={`https://line.me/R/ti/p/~${officeContact.line}`}
+                href={officeContact.lineUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/8 px-6 py-3 text-sm font-bold text-white transition hover:border-gold hover:bg-white/12 hover:text-gold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"

@@ -3,6 +3,7 @@ import { profileSlugs } from '@/features/profile'
 import { serviceRouteSlugs } from '@/lib/data/services'
 import { legalArticles } from '@/lib/data/articles'
 import { englishLegalArticles } from '@/lib/data/articles-en'
+import { dikaKnowledge } from '@/lib/data/dika-knowledge'
 
 const baseUrl = 'https://www.thiangthamlaw.com'
 
@@ -68,6 +69,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   legalArticles.forEach((article) => {
     thDynamicPaths.push({ path: `/th/articles/${article.slug}`, priority: 0.6, changeFrequency: 'monthly' })
     thDynamicPaths.push({ path: `/th/legal-knowledge/${article.slug}`, priority: 0.6, changeFrequency: 'monthly' })
+  })
+
+  // 4. Dika knowledge base (100 entries)
+  dikaKnowledge.forEach((entry) => {
+    thDynamicPaths.push({ path: `/th/dika/${entry.slug}`, priority: 0.6, changeFrequency: 'monthly' })
   })
   englishLegalArticles.forEach((article) => {
     enDynamicPaths.push({ path: `/en/articles/${article.slug}`, priority: 0.5, changeFrequency: 'monthly' })

@@ -31,6 +31,17 @@ export function ServiceDetail({
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1fr_340px]">
             <div className="space-y-8">
+              <section aria-label={isEnglish ? 'Summary' : 'สรุปสั้น'} className="rounded-2xl border border-gold/40 bg-secondary/70 p-6 md:p-8">
+                <h2 className="font-serif text-2xl font-bold text-burgundy">
+                  {isEnglish ? 'TL;DR' : 'สรุปสั้น'}
+                </h2>
+                <p className="mt-4 leading-8 text-muted-foreground">
+                  {isEnglish
+                    ? `Thiangtham Law Office (19+ years) advises and represents clients in ${service.title} across Thailand. Send your facts and documents for an initial assessment before filing or responding. Call +66 82 377 2404`
+                    : `สำนักกฎหมายเที่ยงธรรมทนายความ (ประสบการณ์กว่า 19 ปี) ให้คำปรึกษาและรับว่าความเรื่อง${service.title}ทั่วราชอาณาจักร ส่งข้อเท็จจริงและเอกสารเพื่อประเมินเบื้องต้นก่อนฟ้องหรือต่อสู้คดี โทร 082-377-2404`}
+                </p>
+              </section>
+
               <section className="rounded-2xl border border-border bg-card p-6 md:p-8">
                 <h2 className="font-serif text-2xl font-bold text-burgundy">
                   {isEnglish ? 'Service Overview' : 'ภาพรวมบริการ'}
@@ -64,6 +75,45 @@ export function ServiceDetail({
                   <p className="mt-3 leading-7 text-muted-foreground">{service.note}</p>
                 </section>
               )}
+
+              <section aria-label={isEnglish ? 'Frequently asked questions' : 'คำถามที่พบบ่อย'}>
+                <div className="flex items-center gap-3">
+                  <Info className="size-6 text-gold" aria-hidden="true" />
+                  <h2 className="font-serif text-2xl font-bold text-burgundy">
+                    {isEnglish ? 'Frequently Asked Questions' : 'คำถามที่พบบ่อย'}
+                  </h2>
+                </div>
+                <div className="mt-5 space-y-3">
+                  <details className="rounded-xl border border-border bg-card p-5">
+                    <summary className="cursor-pointer font-semibold leading-7">
+                      {isEnglish
+                        ? `What documents should I prepare for ${service.title}?`
+                        : `ต้องเตรียมเอกสารอะไรก่อนปรึกษาเรื่อง${service.title}?`}
+                    </summary>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground">{service.documentsToPrepare.join(' ')}</p>
+                  </details>
+                  <details className="rounded-xl border border-border bg-card p-5">
+                    <summary className="cursor-pointer font-semibold leading-7">
+                      {isEnglish ? 'How much does it cost?' : 'ค่าบริการคิดอย่างไร?'}
+                    </summary>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                      {isEnglish
+                        ? 'Fees depend on case type, complexity, evidence, court level, and agreed scope. Our team always confirms the scope and fees before starting work.'
+                        : 'ค่าบริการขึ้นอยู่กับประเภทเรื่อง ความซับซ้อนของข้อเท็จจริง เอกสาร ชั้นศาล และขอบเขตงานที่ตกลงกัน ทีมงานจะแจ้งขอบเขตงานและค่าใช้จ่ายก่อนเริ่มงานทุกครั้ง'}
+                    </p>
+                  </details>
+                  <details className="rounded-xl border border-border bg-card p-5">
+                    <summary className="cursor-pointer font-semibold leading-7">
+                      {isEnglish ? 'Do you take cases outside Ubon Ratchathani?' : 'รับทำคดีต่างจังหวัดหรือไม่?'}
+                    </summary>
+                    <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                      {isEnglish
+                        ? 'Yes. The office is in Det Udom, Ubon Ratchathani, and represents clients in courts nationwide across all 77 provinces, including online consultation via phone and LINE.'
+                        : 'สำนักงานตั้งอยู่ที่อำเภอเดชอุดม จังหวัดอุบลราชธานี และรับว่าความทั่วราชอาณาจักรทั้ง 77 จังหวัด พร้อมปรึกษากฎหมายออนไลน์ทางโทรศัพท์และ LINE'}
+                    </p>
+                  </details>
+                </div>
+              </section>
 
               <section className="rounded-2xl bg-burgundy p-6 text-burgundy-foreground md:p-8">
                 <h2 className="font-serif text-2xl font-bold text-gold">

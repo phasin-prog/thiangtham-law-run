@@ -1,5 +1,42 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, FileText, Gavel } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'หาทนาย จ้างทนาย ปรึกษาคดีแพ่ง อาญา ครอบครัว มรดก ที่ดิน | บริการทั้งหมด',
+  description:
+    'หาทนาย จ้างทนาย ปรึกษากฎหมายออนไลน์ คดีแพ่ง คดีอาญา คดีครอบครัว ฟ้องหย่า ฟ้องชู้ มรดก ผู้จัดการมรดก คดีที่ดิน เช็คเด้ง แรงงาน สัญญา ภาษี รับว่าความทั่วราชอาณาจักร โทร 082-377-2404',
+  keywords: [
+    'หาทนาย',
+    'จ้างทนาย',
+    'ปรึกษาทนาย',
+    'ทนายคดีแพ่ง',
+    'ทนายคดีอาญา',
+    'ทนายฟ้องหย่า',
+    'ทนายฟ้องชู้',
+    'ทนายจัดการมรดก',
+    'ทนายคดีที่ดิน',
+    'ทนายคดีเช็ค',
+    'ทนายแรงงาน',
+    'ร่างและตรวจสัญญา',
+  ],
+  alternates: {
+    canonical: 'https://www.thiangthamlaw.com/th/services',
+    languages: {
+      'th-TH': 'https://www.thiangthamlaw.com/th/services',
+      'en-US': 'https://www.thiangthamlaw.com/en/services',
+      'x-default': 'https://www.thiangthamlaw.com/th/services',
+    },
+  },
+  openGraph: {
+    title: 'บริการทนายความครบวงจร รับว่าความทั่วราชอาณาจักร',
+    description: 'คดีแพ่ง อาญา ครอบครัว มรดก ที่ดิน เช็ค แรงงาน สัญญา ปรึกษากฎหมายออนไลน์ โทร 082-377-2404',
+    url: 'https://www.thiangthamlaw.com/th/services',
+    siteName: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
+    locale: 'th_TH',
+    type: 'website',
+  },
+}
 import { Container } from '@/components/container'
 import { CTASection } from '@/components/cta-section'
 import { PageHero } from '@/components/page-hero'

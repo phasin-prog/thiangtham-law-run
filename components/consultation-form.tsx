@@ -2,10 +2,10 @@
 
 import { useId, useState, useRef } from 'react'
 import { usePathname } from 'next/navigation'
-import { 
-  AlertCircle, 
-  CheckCircle2, 
-  Send, 
+import {
+  AlertCircle,
+  CheckCircle2,
+  Send,
   ChevronDown,
   Scale,
   ShieldCheck,
@@ -14,7 +14,11 @@ import {
   FileText,
   CircleHelp,
   MapPin,
+  MessageCircle,
+  Phone,
 } from 'lucide-react'
+import { officeContact } from '@/lib/data/office'
+import { trackConversion } from '@/components/analytics-tracker'
 import { useTranslation } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 import gsap from 'gsap'
@@ -193,6 +197,7 @@ export function ConsultationForm({ tone = 'light' }: ConsultationFormProps) {
       }
 
       setStatus('success')
+      trackConversion('consult_submit')
     } catch {
       setErrorMessage(
         t(
@@ -239,15 +244,38 @@ export function ConsultationForm({ tone = 'light' }: ConsultationFormProps) {
           )}
         >
           {t(
-            'ทีมงานจะตรวจสอบข้อมูลเบื้องต้นและติดต่อกลับตามหมายเลขที่ท่านระบุ',
-            'Our team will review the information and contact you using the phone number provided.',
+            'ทีมงานจะตรวจสอบข้อมูลเบื้องต้นและติดต่อกลับภายใน 24 ชั่วโมง (เวลาทำการ 08:30–17:30 น.) หากเรื่องเร่งด่วน ติดต่อได้ทันทีตามช่องทางด้านล่าง',
+            'Our team will review the information and contact you within 24 hours (office hours 8:30 AM–5:30 PM). For urgent matters, reach us immediately below.',
           )}
         </p>
+        <div className="mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row">
+          <a
+            href={`tel:${officeContact.phones[0].replace(/-/g, '')}`}
+            className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3 text-sm font-bold text-primary-dark transition hover:bg-gold-soft"
+          >
+            <Phone className="size-5" aria-hidden="true" />
+            {t('โทรด่วน', 'Call Now')}
+          </a>
+          <a
+            href={officeContact.lineUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(
+              'inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border px-6 py-3 text-sm font-bold transition',
+              isDark
+                ? 'border-white/30 text-white hover:border-gold hover:text-gold'
+                : 'border-primary/30 text-primary hover:border-gold hover:text-gold-ink',
+            )}
+          >
+            <MessageCircle className="size-5" aria-hidden="true" />
+            {t('ส่งเอกสารทาง LINE', 'Send Docs via LINE')}
+          </a>
+        </div>
         <button
           type="button"
           onClick={() => setStatus('idle')}
           className={cn(
-            'mt-8 rounded-md px-4 py-2 text-sm font-bold focus-visible:outline-none focus-visible:ring-2',
+            'mt-4 rounded-md px-4 py-2 text-sm font-bold focus-visible:outline-none focus-visible:ring-2',
             isDark
               ? 'text-gold hover:bg-white/10 focus-visible:ring-gold'
               : 'text-primary hover:bg-secondary focus-visible:ring-primary',

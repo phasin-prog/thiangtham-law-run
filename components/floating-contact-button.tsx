@@ -31,7 +31,7 @@ export function FloatingContactButton() {
 
         {/* 2. LINE Chat */}
         <a
-          href={`https://line.me/R/ti/p/~${officeContact.line}`}
+          href={officeContact.lineUrl}
           target="_blank"
           rel="noreferrer"
           className="flex-1 flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-gold/40 bg-white/10 px-3 py-2 text-xs font-bold text-white transition-transform active:scale-95 hover:bg-white/15"

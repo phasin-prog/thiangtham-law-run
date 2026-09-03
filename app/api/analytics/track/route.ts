@@ -108,7 +108,8 @@ export async function POST(request: Request) {
     sessionId?: unknown
   }
 
-  if (event !== 'pageview' && event !== 'heartbeat') {
+  const allowedEvents = new Set(['pageview', 'heartbeat', 'tel_click', 'line_click', 'consult_submit'])
+  if (typeof event !== 'string' || !allowedEvents.has(event)) {
     return jsonResponse({ ok: false, code: 'INVALID_EVENT' }, 400)
   }
 

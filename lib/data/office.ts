@@ -13,6 +13,8 @@ export const officeInfo = {
 export const officeContact = {
   phones: ['082-377-2404', '081-538-2404'],
   line: 'Kasemchimphlee',
+  /** ลิงก์เพิ่มเพื่อน LINE จุดเดียวทั้งเว็บ — ตรวจกับแอป LINE ก่อนเปลี่ยน ID */
+  lineUrl: 'https://line.me/R/ti/p/@Kasemchimphlee',
   facebook: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
   facebookUrl: 'https://www.facebook.com/profile.php?id=61590418125412',
   whatsapp: '66823772404',

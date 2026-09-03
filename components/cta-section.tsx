@@ -38,7 +38,7 @@ export function CTASection({
           <div className="flex flex-col gap-4 sm:flex-row md:flex-col lg:flex-row lg:items-center lg:justify-end">
             <div className="flex flex-col gap-3 sm:flex-1 md:flex-none">
               <a
-                href={`https://line.me/R/ti/p/~${officeContact.line}`}
+                href={officeContact.lineUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="motion-action inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-gold px-8 py-3 text-sm font-bold text-primary-dark shadow-md shadow-gold/10 transition-[transform,background-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:bg-gold-soft"

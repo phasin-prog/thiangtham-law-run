@@ -67,7 +67,7 @@ function TopInfoBar() {
             <span className="font-bold">{officeContact.phones[0]}</span>
           </a>
           <a
-            href={`https://line.me/R/ti/p/~${officeContact.line}`}
+            href={officeContact.lineUrl}
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-1.5 transition hover:text-gold"

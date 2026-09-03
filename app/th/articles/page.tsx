@@ -1,5 +1,20 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleCard } from '@/components/article-card'
+
+export const metadata: Metadata = {
+  title: 'กฎหมายน่ารู้ ฟ้องหย่า มรดก ที่ดิน เช็คเด้ง โดนฟ้องทำอย่างไร | บทความ',
+  description:
+    'คู่มือกฎหมายเข้าใจง่าย ฟ้องหย่าเตรียมเอกสารอะไร ฟ้องชู้เรียกค่าทดแทน ผู้จัดการมรดก ที่ดินถูกบุกรุก เช็คเด้ง โดนฟ้องคดีแพ่ง โดนหมายเรียก พร้อมแนวทางปรึกษาทนาย โทร 082-377-2404',
+  alternates: {
+    canonical: 'https://www.thiangthamlaw.com/th/articles',
+    languages: {
+      'th-TH': 'https://www.thiangthamlaw.com/th/articles',
+      'en-US': 'https://www.thiangthamlaw.com/en/articles',
+      'x-default': 'https://www.thiangthamlaw.com/th/articles',
+    },
+  },
+}
 import { Container } from '@/components/container'
 import { CTASection } from '@/components/cta-section'
 import { PageHero } from '@/components/page-hero'

@@ -17,7 +17,28 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const article = getEnglishLegalArticle(slug)
-  return article ? { title: article.title, description: article.excerpt } : { title: 'Article Not Found' }
+  if (!article) return { title: 'Article Not Found', robots: { index: false, follow: true } }
+  const title = `${article.title} | Thiangtham Law Office`
+  const url = `https://www.thiangthamlaw.com/en/articles/${slug}`
+  return {
+    title,
+    description: article.excerpt,
+    authors: [{ name: article.author }],
+    alternates: {
+      canonical: url,
+      languages: { 'en-US': url, 'x-default': `https://www.thiangthamlaw.com/th/articles/${slug}` },
+    },
+    openGraph: {
+      title,
+      description: article.excerpt,
+      url,
+      siteName: 'Thiangtham Law Office',
+      locale: 'en_US',
+      type: 'article',
+      images: [{ url: '/law-office-hero.png', width: 1200, height: 630, alt: article.title }],
+    },
+    twitter: { card: 'summary_large_image', title, description: article.excerpt, images: ['/law-office-hero.png'] },
+  }
 }
 
 export default async function EnglishArticleDetailPage({ params }: Props) {

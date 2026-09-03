@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { cookies } from 'next/headers'
 import { FloatingContactButton } from '@/components/floating-contact-button'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
 import { DocumentLocale } from '@/components/document-locale'
 import { MotionShell } from '@/components/motion/motion-shell'
 import { LanguageProvider } from '@/lib/i18n'
-import { isLocale, localeCookieName } from '@/lib/i18n-config'
 import { englishHomeFaqs } from '@/lib/data/faqs-en'
 import { officeContact, officeInfo } from '@/lib/data/office'
 
@@ -74,14 +72,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function EnglishLayout({
+export default function EnglishLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  const cookieStore = await cookies()
-  const savedLocale = cookieStore.get(localeCookieName)?.value
-  const initialLocale = isLocale(savedLocale) ? savedLocale : undefined
+  // locale มาจาก path /en โดยตรง ไม่ต้องอ่าน cookie ฝั่ง server
+  // เพื่อให้ทุกหน้า prerender เป็น static และขึ้น CDN cache ได้
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -90,7 +87,17 @@ export default async function EnglishLayout({
     alternateName: [officeInfo.name, 'Thiangtham Law Firm Thailand', 'Nationwide Thai Attorney'],
     description: metadata.description,
     url: 'https://www.thiangthamlaw.com/en',
+    image: 'https://www.thiangthamlaw.com/law-office-hero.png',
     telephone: officeContact.phones[0],
+    email: officeContact.email,
+    sameAs: [officeContact.facebookUrl, officeContact.mapUrl],
+    founder: {
+      '@type': 'Attorney',
+      name: 'Kasem Chimphlee',
+      alternateName: 'นายเกษม ฉิมพลี',
+      jobTitle: 'Head Lawyer',
+      worksFor: { '@type': 'LegalService', name: officeInfo.englishName },
+    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: officeContact.addressEn,
@@ -164,7 +171,7 @@ export default async function EnglishLayout({
   }
 
   return (
-    <LanguageProvider initialLocale={initialLocale ?? 'en'}>
+    <LanguageProvider initialLocale="en">
       <DocumentLocale />
       <MotionShell
         header={<SiteHeader />}

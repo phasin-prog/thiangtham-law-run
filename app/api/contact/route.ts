@@ -10,6 +10,7 @@ import {
   withTimeout,
 } from '@/lib/security/request'
 import { consumeRateLimit } from '@/lib/security/rate-limit'
+import { notifyNewLead } from '@/lib/notify-lead'
 import { getSupabaseAdmin, isSupabaseConfigured } from '@/lib/supabase'
 
 export const runtime = 'nodejs'
@@ -81,6 +82,7 @@ export async function POST(request: Request) {
       timestamp: new Date().toISOString(),
       data: result.data,
     })
+    void notifyNewLead({ ...result.data, saved: 'log' })
     return jsonResponse({ ok: true, fallback: true }, 201)
   }
 
@@ -103,6 +105,7 @@ export async function POST(request: Request) {
         timestamp: new Date().toISOString(),
         data: result.data,
       })
+      void notifyNewLead({ ...result.data, saved: 'log' })
       return jsonResponse({ ok: true, fallback: true }, 201)
     }
 
@@ -132,9 +135,11 @@ export async function POST(request: Request) {
         timestamp: new Date().toISOString(),
         data: result.data,
       })
+      void notifyNewLead({ ...result.data, saved: 'log' })
       return jsonResponse({ ok: true, fallback: true }, 201)
     }
 
+    void notifyNewLead({ ...result.data, saved: 'db' })
     return jsonResponse({ ok: true }, 201)
   } catch (error) {
     console.warn(
@@ -145,6 +150,7 @@ export async function POST(request: Request) {
       timestamp: new Date().toISOString(),
       data: result.data,
     })
+    void notifyNewLead({ ...result.data, saved: 'log' })
     return jsonResponse({ ok: true, fallback: true }, 201)
   }
 }

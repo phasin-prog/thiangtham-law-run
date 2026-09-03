@@ -54,7 +54,7 @@ export function SiteFooter() {
               </svg>
             </a>
             <a
-              href={`https://line.me/R/ti/p/~${officeContact.line}`}
+              href={officeContact.lineUrl}
               target="_blank"
               rel="noreferrer"
               aria-label="Line"
@@ -171,7 +171,7 @@ export function SiteFooter() {
             <li className="flex gap-3">
               <MessageCircle className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden="true" />
               <a
-                href={`https://line.me/R/ti/p/~${officeContact.line}`}
+                href={officeContact.lineUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="font-semibold text-white transition-colors hover:text-gold"

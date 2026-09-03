@@ -1,9 +1,9 @@
 'use client'
 
 import { useId, useState, useRef } from 'react'
-import { 
-  CheckCircle2, 
-  Send, 
+import {
+  CheckCircle2,
+  Send,
   ChevronDown,
   Scale,
   ShieldCheck,
@@ -12,8 +12,12 @@ import {
   FileText,
   CircleHelp,
   MapPin,
-  AlertCircle
+  AlertCircle,
+  MessageCircle,
+  Phone
 } from 'lucide-react'
+import { officeContact } from '@/lib/data/office'
+import { trackConversion } from '@/components/analytics-tracker'
 import { DisclaimerBlock } from '@/components/disclaimer-block'
 import { useTranslation } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
@@ -91,6 +95,7 @@ export function ContactForm() {
       })
       if (!res.ok) throw new Error(`HTTP ${res.status}`)
       setStatus('success')
+      trackConversion('consult_submit')
     } catch {
       setStatus('error')
     }
@@ -109,10 +114,28 @@ export function ContactForm() {
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
           {t(
-            'ขอบคุณที่ติดต่อสำนักกฎหมายเที่ยงธรรมทนายความ ทีมงานจะติดต่อกลับตามช่องทางที่ท่านระบุโดยเร็วที่สุด',
-            'Thank you for contacting Thiangtham Law Office. Our team will get back to you through your preferred channel as soon as possible.'
+            'ขอบคุณที่ติดต่อสำนักกฎหมายเที่ยงธรรมทนายความ ทีมงานจะติดต่อกลับภายใน 24 ชั่วโมง (เวลาทำการ 08:30–17:30 น.) หากเรื่องเร่งด่วน ติดต่อได้ทันทีตามช่องทางด้านล่าง',
+            'Thank you for contacting Thiangtham Law Office. Our team will get back to you within 24 hours (office hours 8:30 AM–5:30 PM). For urgent matters, reach us immediately below.'
           )}
         </p>
+        <div className="mx-auto mt-8 flex w-full max-w-md flex-col gap-3 sm:flex-row">
+          <a
+            href={`tel:${officeContact.phones[0].replace(/-/g, '')}`}
+            className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-gold px-6 py-3 text-sm font-bold text-primary-dark transition hover:bg-gold-soft"
+          >
+            <Phone className="size-5" aria-hidden="true" />
+            {t('โทรด่วน', 'Call Now')}
+          </a>
+          <a
+            href={officeContact.lineUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-primary/30 px-6 py-3 text-sm font-bold text-primary transition hover:border-gold hover:text-gold-ink"
+          >
+            <MessageCircle className="size-5" aria-hidden="true" />
+            {t('ส่งเอกสารทาง LINE', 'Send Docs via LINE')}
+          </a>
+        </div>
         <button
           type="button"
           onClick={() => setStatus('idle')}

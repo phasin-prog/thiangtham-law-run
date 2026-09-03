@@ -17,15 +17,29 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const article = getLegalArticle(slug)
-  return article 
-    ? { 
-        title: article.title, 
-        description: article.excerpt,
-        alternates: {
-          canonical: `https://www.thiangthamlaw.com/th/articles/${slug}`,
-        }
-      } 
-    : { title: 'ไม่พบบทความ' }
+  if (!article) return { title: 'ไม่พบบทความ', robots: { index: false, follow: true } }
+  const title = `${article.title} | ปรึกษาทนาย สำนักกฎหมายเที่ยงธรรม`
+  const url = `https://www.thiangthamlaw.com/th/articles/${slug}`
+  return {
+    title,
+    description: `${article.excerpt} อ่านคู่มือเตรียมเอกสาร ขั้นตอน และแนวทางปรึกษาทนาย โทร 082-377-2404`,
+    keywords: [article.title, article.category, 'ปรึกษาทนาย', 'หาทนาย', 'จ้างทนาย', 'สำนักกฎหมายเที่ยงธรรมทนายความ'],
+    authors: [{ name: article.author }],
+    alternates: {
+      canonical: url,
+      languages: { 'th-TH': url, 'x-default': url },
+    },
+    openGraph: {
+      title,
+      description: article.excerpt,
+      url,
+      siteName: 'สำนักกฎหมายเที่ยงธรรมทนายความ',
+      locale: 'th_TH',
+      type: 'article',
+      images: [{ url: '/law-office-hero.png', width: 1200, height: 630, alt: article.title }],
+    },
+    twitter: { card: 'summary_large_image', title, description: article.excerpt, images: ['/law-office-hero.png'] },
+  }
 }
 
 export default async function ArticleDetailPage({ params }: Props) {
@@ -34,8 +48,32 @@ export default async function ArticleDetailPage({ params }: Props) {
   if (!article) notFound()
   const related = legalArticles.filter((item) => item.slug !== article.slug).slice(0, 3)
 
+  const url = `https://www.thiangthamlaw.com/th/articles/${article.slug}`
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    inLanguage: 'th-TH',
+    author: { '@type': 'Organization', name: 'สำนักกฎหมายเที่ยงธรรมทนายความ', url: 'https://www.thiangthamlaw.com/th' },
+    publisher: { '@type': 'Organization', name: 'สำนักกฎหมายเที่ยงธรรมทนายความ', url: 'https://www.thiangthamlaw.com/th' },
+    mainEntityOfPage: url,
+    about: article.category,
+  }
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://www.thiangthamlaw.com/th' },
+      { '@type': 'ListItem', position: 2, name: 'บทความ', item: 'https://www.thiangthamlaw.com/th/articles' },
+      { '@type': 'ListItem', position: 3, name: article.title, item: url },
+    ],
+  }
+
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <PageHero
         title={article.title}
         description={`${article.category} · ${article.date} · ${article.author} · ${article.readTime}`}

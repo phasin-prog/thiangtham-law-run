@@ -13,6 +13,7 @@ import {
 import { Container } from '@/components/container'
 import { ContactForm } from '@/components/contact-form'
 import { MapSection } from '@/components/map-section'
+import { ReviewsCard } from '@/components/reviews-card'
 import { PageHero } from '@/components/page-hero'
 import { officeContact } from '@/lib/data/office'
 
@@ -35,7 +36,7 @@ export default function ContactPage() {
       icon: MessageCircle, 
       label: 'LINE Official', 
       value: `@${officeContact.line}`, 
-      href: `https://line.me/R/ti/p/~${officeContact.line}`,
+      href: officeContact.lineUrl,
       description: 'ส่งเอกสารประเมินฟรี',
       primary: true
     },
@@ -152,6 +153,9 @@ export default function ContactPage() {
                   ))}
                 </ul>
               </div>
+
+              {/* 7b. Google reviews */}
+              <ReviewsCard />
 
               {/* 7. Privacy and legal disclaimer */}
               <div className="rounded-[2.5rem] bg-secondary/30 p-8 border border-gold/10">

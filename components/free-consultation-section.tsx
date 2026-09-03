@@ -29,7 +29,7 @@ export function FreeConsultationSection() {
       description: t('ส่งภาพถ่ายเอกสารหรือหมายศาลมาที่ Line เพื่อให้ทีมงานช่วยตรวจสอบ', 'Send photos of documents or summons via Line for a quick review.'),
       action: {
         label: `@${officeContact.line}`,
-        href: `https://line.me/R/ti/p/~${officeContact.line}`,
+        href: officeContact.lineUrl,
       },
     },
     {

@@ -7,6 +7,13 @@ import { PageHero } from '@/components/page-hero'
 export const metadata: Metadata = {
   title: 'ค้นหา',
   description: 'ค้นหาบริการและบทความกฎหมายของสำนักกฎหมายเที่ยงธรรมทนายความ',
+  alternates: {
+    canonical: 'https://www.thiangthamlaw.com/th/search',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 }
 
 export default function SearchPage() {

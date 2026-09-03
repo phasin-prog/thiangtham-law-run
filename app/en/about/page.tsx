@@ -59,7 +59,7 @@ const contactItems = [
     href: `tel:${officeContact.phones[0].replace(/-/g, '')}`,
     subValue: officeContact.phones[1]
   },
-  { icon: MessageCircle, label: 'LINE Official', value: `@${officeContact.line}`, href: `https://line.me/R/ti/p/~${officeContact.line}`, subValue: undefined },
+  { icon: MessageCircle, label: 'LINE Official', value: `@${officeContact.line}`, href: officeContact.lineUrl, subValue: undefined },
   { icon: Mail, label: 'Office Email', value: officeContact.email, href: `mailto:${officeContact.email}`, subValue: undefined },
   { icon: Clock3, label: 'Office Hours', value: officeContact.hoursEn, href: undefined, subValue: undefined },
 ] as const
