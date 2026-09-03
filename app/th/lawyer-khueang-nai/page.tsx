@@ -274,6 +274,35 @@ export default function LawyerKhueangNaiPage() {
 
       <section className="py-16 md:py-20">
         <Container>
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-gold-ink">
+              Common Questions
+            </p>
+            <h2 className="mt-3 font-serif text-3xl font-bold text-primary">
+              ประเด็นที่ชาวเขื่องในถามบ่อย
+            </h2>
+            <p className="mt-4 text-base leading-8 text-muted-foreground">
+              เขื่องในใกล้ตัวเมืองอุบล ปัญหาที่พบมากคือการซื้อขายที่ดิน สินสมรสของคู่สมรส การทวงหนี้ และการบุกรุกที่ดิน กดอ่านหลักกฎหมายพร้อมฎีกาประกอบได้เลย
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {[
+              { href: '/th/dika/sue-thidin-mai-dai-on', label: 'ซื้อที่ดินจ่ายครบแต่ไม่โอนฟ้องได้ไหม' },
+              { href: '/th/dika/sin-somrot-mee-arai-bang', label: 'สินสมรสมีอะไรบ้าง เงินเดือนใช่ไหม' },
+              { href: '/th/dika/thuang-ni-mai-phid-kodmai', label: 'ทวงหนี้อย่างไรไม่ผิดกฎหมาย' },
+              { href: '/th/dika/fong-khaplai-riak-kha-sia-hai', label: 'คนบุกรุกที่ดินฟ้องขับไล่พร้อมเรียกค่าเสียหายได้ไหม' },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-gold/40">
+                <span className="text-sm font-bold leading-7 text-primary group-hover:text-gold-ink">{item.label}</span>
+                <ArrowRight className="size-4 shrink-0 text-gold transition group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 md:py-20">
+        <Container>
           <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-start">
             <div className="rounded-3xl border border-gold/25 bg-card p-6 md:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-gold-ink">

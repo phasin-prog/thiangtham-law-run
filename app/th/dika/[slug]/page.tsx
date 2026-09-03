@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, Gavel, Scale } from 'lucide-react'
 import { Container } from '@/components/container'
 import { CTASection } from '@/components/cta-section'
 import { PageHero } from '@/components/page-hero'
+import { ShareButtons } from '@/components/share-buttons'
 import { dikaKnowledge, getDikaEntry, getRelatedDika, dikaCategoryLabel } from '@/lib/data/dika-knowledge'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -162,6 +163,9 @@ export default async function DikaDetailPage({ params }: Props) {
           <div className="mt-10 rounded-2xl border border-gold/35 bg-secondary/70 p-6 text-sm leading-7 text-muted-foreground">
             บทความนี้สรุปหลักกฎหมายทั่วไปประกอบแนวคำพิพากษาศาลฎีกา ไม่ใช่คำปรึกษาเฉพาะกรณี
             ผลคดีจริงขึ้นกับข้อเท็จจริง พยานหลักฐาน และกฎหมายที่ใช้บังคับในขณะนั้น ควรปรึกษาทนายก่อนดำเนินการ
+          </div>
+          <div className="mt-8">
+            <ShareButtons title={entry.question} url={url} />
           </div>
           <Link href="/th/dika" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary">
             <ArrowLeft className="size-4" /> กลับไปหน้าฎีกาทั้งหมด

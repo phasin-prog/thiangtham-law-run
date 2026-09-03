@@ -6,6 +6,7 @@ import { ArticleCard } from '@/components/article-card'
 import { Container } from '@/components/container'
 import { CTASection } from '@/components/cta-section'
 import { PageHero } from '@/components/page-hero'
+import { ShareButtons } from '@/components/share-buttons'
 import { getLegalArticle, legalArticles } from '@/lib/data/articles'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -109,6 +110,9 @@ export default async function ArticleDetailPage({ params }: Props) {
           <div className="mt-12 rounded-2xl border border-gold/35 bg-secondary/70 p-6 text-sm leading-7 text-muted-foreground">
             บทความนี้เป็นข้อมูลทั่วไป ไม่ใช่คำปรึกษาทางกฎหมายเฉพาะกรณี
             ข้อเท็จจริง เอกสาร และกำหนดเวลาของแต่ละเรื่องอาจทำให้แนวทางแตกต่างกัน
+          </div>
+          <div className="mt-8">
+            <ShareButtons title={article.title} url={`https://www.thiangthamlaw.com/th/articles/${article.slug}`} />
           </div>
           <Link href="/th/articles" className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary">
             <ArrowLeft className="size-4" /> กลับไปหน้าบทความ

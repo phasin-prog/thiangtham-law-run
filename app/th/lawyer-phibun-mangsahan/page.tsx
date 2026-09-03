@@ -276,6 +276,35 @@ export default function LawyerPhibunMangsahanPage() {
 
       <section className="py-16 md:py-20">
         <Container>
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.16em] text-gold-ink">
+              Common Questions
+            </p>
+            <h2 className="mt-3 font-serif text-3xl font-bold text-primary">
+              ประเด็นที่ชาวพิบูลมังสาหารถามบ่อย
+            </h2>
+            <p className="mt-4 text-base leading-8 text-muted-foreground">
+              พิบูลมังสาหารมีพื้นที่เกษตรกรรมกว้างขวาง ข้อพิพาทที่พบมากคือแนวเขตที่ดิน การครอบครองทำกิน การแบ่งมรดกที่ดิน และหนี้สินภาคเกษตร กดอ่านหลักกฎหมายพร้อมฎีกาประกอบได้เลย
+            </p>
+          </div>
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {[
+              { href: '/th/dika/khon-uen-yu-koen-10-pi', label: 'คนอื่นมาอยู่ในที่ดินเกิน 10 ปีจะเสียที่ดินไหม' },
+              { href: '/th/dika/ruk-lam-naew-khet', label: 'เพื่อนบ้านรุกล้ำแนวเขตทำอย่างไร' },
+              { href: '/th/dika/pho-mae-tai-mai-mee-phinai', label: 'พ่อแม่เสียโดยไม่ทำพินัยกรรมใครได้มรดก' },
+              { href: '/th/dika/dok-bia-goen-attra', label: 'กู้เงินดอกเบี้ยเกินอัตราเจ้าหนี้ฟ้องได้ไหม' },
+            ].map((item) => (
+              <Link key={item.href} href={item.href} className="group flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-5 shadow-sm transition hover:border-gold/40">
+                <span className="text-sm font-bold leading-7 text-primary group-hover:text-gold-ink">{item.label}</span>
+                <ArrowRight className="size-4 shrink-0 text-gold transition group-hover:translate-x-1" aria-hidden="true" />
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-16 md:py-20">
+        <Container>
           <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-start">
             <div className="rounded-3xl border border-gold/25 bg-card p-6 md:p-8">
               <p className="text-sm font-bold uppercase tracking-[0.16em] text-gold-ink">
