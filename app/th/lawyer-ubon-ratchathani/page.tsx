@@ -120,6 +120,7 @@ export default function LawyerUbonRatchathaniPage() {
     alternateName: 'Thiangtham Law Office',
     description,
     url: `${baseUrl}/th/lawyer-ubon-ratchathani`,
+    telephone: '082-377-2404',
     areaServed: [
       {
         '@type': 'AdministrativeArea',

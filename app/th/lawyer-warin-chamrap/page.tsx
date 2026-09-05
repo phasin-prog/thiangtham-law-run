@@ -124,6 +124,7 @@ export default function LawyerWarinChamrapPage() {
     alternateName: 'Thiangtham Law Office',
     description,
     url: `${baseUrl}/th/lawyer-warin-chamrap`,
+    telephone: '082-377-2404',
     areaServed: [
       {
         '@type': 'City',

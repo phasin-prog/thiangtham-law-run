@@ -191,7 +191,7 @@ export default function AboutPage() {
                   className="object-contain p-8 md:p-12"
                 />
               </div>
-              <div className="absolute -bottom-8 -left-8 md:-left-12 rounded-3xl bg-gold p-8 md:p-10 text-primary shadow-2xl max-w-xs">
+              <div className="absolute -bottom-8 left-4 md:left-8 rounded-3xl bg-gold p-8 md:p-10 text-primary shadow-2xl max-w-xs">
                 <Scale className="size-12 mb-6" />
                 <p className="font-serif text-2xl font-bold leading-tight italic">
                   &quot;ยึดมั่นความเที่ยงธรรม รักษาความลับลูกความ&quot;

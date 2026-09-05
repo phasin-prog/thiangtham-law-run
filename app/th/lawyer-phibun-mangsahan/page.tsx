@@ -124,6 +124,7 @@ export default function LawyerPhibunMangsahanPage() {
     alternateName: 'Thiangtham Law Office',
     description,
     url: `${baseUrl}/th/lawyer-phibun-mangsahan`,
+    telephone: '082-377-2404',
     areaServed: [
       {
         '@type': 'City',

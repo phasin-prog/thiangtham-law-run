@@ -124,6 +124,7 @@ export default function LawyerTrakanPhuetPhonPage() {
     alternateName: 'Thiangtham Law Office',
     description,
     url: `${baseUrl}/th/lawyer-trakan-phuet-phon`,
+    telephone: '082-377-2404',
     areaServed: [
       {
         '@type': 'City',

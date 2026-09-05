@@ -88,8 +88,18 @@ export default function EnglishLayout({
     description: metadata.description,
     url: 'https://www.thiangthamlaw.com/en',
     image: 'https://www.thiangthamlaw.com/law-office-hero.png',
+    foundingDate: '2007',
+    numberOfEmployees: 9,
     telephone: officeContact.phones[0],
     email: officeContact.email,
+    logo: 'https://www.thiangthamlaw.com/law-office-logo.svg',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+66-82-377-2404',
+      contactType: 'customer service',
+      areaServed: 'TH',
+      availableLanguage: ['Thai', 'English'],
+    },
     sameAs: [officeContact.facebookUrl, officeContact.mapUrl],
     founder: {
       '@type': 'Attorney',

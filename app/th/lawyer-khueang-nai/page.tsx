@@ -123,6 +123,7 @@ export default function LawyerKhueangNaiPage() {
     alternateName: 'Thiangtham Law Office',
     description,
     url: `${baseUrl}/th/lawyer-khueang-nai`,
+    telephone: '082-377-2404',
     areaServed: [
       {
         '@type': 'City',

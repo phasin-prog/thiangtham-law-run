@@ -123,6 +123,7 @@ export default function LawyerMuangSamSipPage() {
     alternateName: 'Thiangtham Law Office',
     description,
     url: `${baseUrl}/th/lawyer-muang-sam-sip`,
+    telephone: '082-377-2404',
     areaServed: [
       {
         '@type': 'City',

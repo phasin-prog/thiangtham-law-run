@@ -211,6 +211,12 @@ export function SiteFooter() {
           <div className="flex shrink-0 flex-col items-end gap-1">
             <p>© {new Date().getFullYear()} {t(siteConfig.name, officeInfo.englishName)}</p>
             <p className="opacity-60 tracking-[0.12em]">AUTHENTIC LEGAL COUNSEL</p>
+            <a
+              href="/llms.txt"
+              className="text-[11px] underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
+            >
+              {t('ข้อมูลสำหรับ AI', 'AI-ready information')}
+            </a>
           </div>
         </Container>
       </div>

@@ -117,6 +117,7 @@ export default function LawyerDetUdomPage() {
     alternateName: 'Thiangtham Law Office',
     description,
     url: `${baseUrl}/th/lawyer-det-udom`,
+    telephone: '082-377-2404',
     areaServed: [
       {
         '@type': 'City',

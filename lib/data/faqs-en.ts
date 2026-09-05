@@ -29,6 +29,11 @@ export const englishHomeFaqs = [
     a: 'No. Initial consultation is free through every channel — phone, LINE, or the website form. Fees apply only if you engage us for further legal work, and we quote them transparently before any formal engagement.',
     category: 'general' as const,
   },
+  {
+    q: 'What are the office phone number and LINE ID?',
+    a: 'Call +66 82 377 2404 or +66 81 538 2404, LINE ID kasemchimphlee, WhatsApp +66 82 377 2404. Open daily 8:30 AM–5:30 PM at 1005 Moo 24, Mueang Det, Det Udom, Ubon Ratchathani 34160, Thailand.',
+    category: 'general' as const,
+  },
 ]
 
 
