@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   keywords: [
     'คำพิพากษาศาลฎีกา',
     'ฎีกาน่ารู้',
+    'ทนายโจทก์',
+    'ทนายจำเลย',
+    'อยากฟ้องคดี',
+    'โดนฟ้องทำยังไง',
+    'จัดการมรดกทำยังไง',
     'ฟ้องชู้ ฎีกา',
     'มรดก ฎีกา',
     'ครอบครองปรปักษ์ ฎีกา',
@@ -122,7 +127,7 @@ export default function DikaPage() {
                           {entry.principle}
                         </p>
                       </div>
-                      <span className="inline-flex size-10 shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition group-hover:bg-gold group-hover:text-navy">
+                      <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition group-hover:bg-gold group-hover:text-navy">
                         <ChevronRight className="size-5" aria-hidden="true" />
                       </span>
                     </Link>

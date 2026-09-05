@@ -67,7 +67,7 @@ export function ProfileCTA() {
               </div>
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-white/40">LINE ID</p>
-                <p className="font-serif text-lg font-bold">@Kasemchimphlee</p>
+                <p className="font-serif text-lg font-bold">kasemchimphlee</p>
               </div>
             </div>
           </div>

@@ -18,7 +18,7 @@ import { PageHero } from '@/components/page-hero'
 import { officeContact } from '@/lib/data/office'
 
 export const metadata: Metadata = {
-  title: 'ติดต่อและปรึกษาคดี | สำนักกฎหมายเที่ยงธรรมทนายความ',
+  title: 'ติดต่อทนาย โทร 082-377-2404 ปรึกษาฟรี | สำนักกฎหมายเที่ยงธรรมทนายความ',
   description: 'ติดต่อสำนักงานกฎหมายเที่ยงธรรมทนายความ เพื่อรับคำปรึกษาเบื้องต้นทางโทรศัพท์ LINE หรือนัดหมายเข้าพบเพื่อตรวจสอบเอกสารคดี',
 }
 
@@ -34,8 +34,8 @@ export default function ContactPage() {
     },
     { 
       icon: MessageCircle, 
-      label: 'LINE Official', 
-      value: `@${officeContact.line}`, 
+      label: 'LINE ID',
+      value: officeContact.line,
       href: officeContact.lineUrl,
       description: 'ส่งเอกสารประเมินฟรี',
       primary: true
@@ -87,7 +87,7 @@ export default function ContactPage() {
                   <item.icon className="size-10" aria-hidden="true" />
                 </div>
                 <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-3">{item.label}</p>
-                <p className="font-serif text-xl font-bold text-primary mb-2 group-hover:text-gold transition-colors">{item.value}</p>
+                <p className="font-serif text-lg md:text-xl font-bold text-primary mb-2 group-hover:text-gold transition-colors break-all">{item.value}</p>
                 <p className="text-sm font-medium text-muted-foreground/70">{item.description}</p>
               </a>
             ))}

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Container } from '@/components/container'
 import { ConsultationForm } from '@/components/consultation-form'
 import { FAQAccordion } from '@/components/faq-accordion'
-import { FeeGuide } from '@/components/fee-guide'
+import { ConsultAssurance } from '@/components/consult-assurance'
 import { PageHero } from '@/components/page-hero'
 import { SectionHeading } from '@/components/section-heading'
 
@@ -59,7 +59,7 @@ export default function EnglishConsultationPage() {
           </aside>
         </Container>
       </section>
-      <FeeGuide locale="en" />
+      <ConsultAssurance locale="en" />
       <section className="bg-secondary/60 py-14 md:py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.6fr_1fr]">
           <SectionHeading eyebrow="Consultation FAQ" title="What to Know Before You Submit" />

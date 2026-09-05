@@ -49,6 +49,29 @@ export function ServiceDetail({
                 <p className="mt-4 leading-8 text-muted-foreground">{service.overview}</p>
               </section>
 
+              <section aria-label={isEnglish ? 'Plaintiff and defendant' : 'ฝั่งโจทก์และจำเลย'} className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-xl border border-gold/40 bg-secondary/70 p-5">
+                  <h3 className="font-serif text-lg font-bold text-burgundy">
+                    {isEnglish ? 'Plaintiff: want to file suit?' : `ฝั่งโจทก์: อยากฟ้อง${service.title}?`}
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                    {isEnglish
+                      ? 'We review facts and evidence, draft the complaint, file with the competent court, and pursue your claim through mediation, trial, and enforcement.'
+                      : 'ทีมงานตรวจข้อเท็จจริงและพยานหลักฐาน ร่างคำฟ้อง ยื่นฟ้องต่อศาลที่มีเขตอำนาจ และดำเนินคดีตั้งแต่ไกล่เกลี่ย สืบพยาน จนถึงบังคับคดี'}
+                  </p>
+                </div>
+                <div className="rounded-xl border border-gold/40 bg-secondary/70 p-5">
+                  <h3 className="font-serif text-lg font-bold text-burgundy">
+                    {isEnglish ? 'Defendant: being sued?' : `ฝั่งจำเลย: โดนฟ้อง${service.title}?`}
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                    {isEnglish
+                      ? 'We examine the complaint, file a timely answer, raise defenses, negotiate settlement, and fight the case in court within every deadline.'
+                      : 'ทีมงานตรวจคำฟ้อง ยื่นคำให้การแก้ต่างให้ทันกำหนด ยกข้อต่อสู้ เจรจาไกล่เกลี่ย และสู้คดีในศาลทุกขั้นตอน ไม่ให้เสียสิทธิเพราะขาดนัด'}
+                  </p>
+                </div>
+              </section>
+
               <section>
                 <div className="flex items-center gap-3">
                   <SearchCheck className="size-6 text-gold" aria-hidden="true" />
@@ -98,8 +121,8 @@ export function ServiceDetail({
                     </summary>
                     <p className="mt-3 text-sm leading-7 text-muted-foreground">
                       {isEnglish
-                        ? 'Fees depend on case type, complexity, evidence, court level, and agreed scope. Our team always confirms the scope and fees before starting work.'
-                        : 'ค่าบริการขึ้นอยู่กับประเภทเรื่อง ความซับซ้อนของข้อเท็จจริง เอกสาร ชั้นศาล และขอบเขตงานที่ตกลงกัน ทีมงานจะแจ้งขอบเขตงานและค่าใช้จ่ายก่อนเริ่มงานทุกครั้ง'}
+                        ? 'Initial consultation is free. Representation fees depend on case type, complexity, evidence, court level, and agreed scope. Our team always confirms the scope and fees before starting work.'
+                        : 'ปรึกษาเบื้องต้นฟรี ส่วนค่าบริการรับว่าความขึ้นอยู่กับประเภทเรื่อง ความซับซ้อนของข้อเท็จจริง เอกสาร ชั้นศาล และขอบเขตงานที่ตกลงกัน ทีมงานจะแจ้งก่อนเริ่มงานทุกครั้ง'}
                     </p>
                   </details>
                   <details className="rounded-xl border border-border bg-card p-5">

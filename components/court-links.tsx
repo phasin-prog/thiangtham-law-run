@@ -18,11 +18,31 @@ const courtsEn = [
  * กล่องลิงก์หน่วยงานยุติธรรมที่เกี่ยวข้องกับคดีในอุบลราชธานี
  * เสริม topical trust + ประโยชน์ผู้ใช้ (ตรวจหมายศาล/นัดพิจารณา)
  */
-export function CourtLinks({ locale = 'th' }: { locale?: 'th' | 'en' }) {
+export function CourtLinks({
+  locale = 'th',
+  district,
+  court,
+}: {
+  locale?: 'th' | 'en'
+  district?: string
+  court?: string
+}) {
   const isEnglish = locale === 'en'
   const courts = isEnglish ? courtsEn : courtsTh
   return (
     <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+      {district && court && (
+        <div className="mb-5 rounded-xl border border-gold/40 bg-gold/10 p-4">
+          <p className="text-sm font-bold text-primary">
+            {isEnglish ? `Cases in ${district}` : `คดีของอำเภอ${district}`}
+          </p>
+          <p className="mt-1 text-sm leading-7 text-muted-foreground">
+            {isEnglish
+              ? `Filed at ${court} under its jurisdiction. Our team verifies the competent court before every filing.`
+              : `ยื่นฟ้องที่${court}ตามเขตอำนาจ ทีมงานตรวจเขตศาลให้ก่อนยื่นทุกคดี`}
+          </p>
+        </div>
+      )}
       <h2 className="flex items-center gap-2 font-serif text-xl font-bold text-primary">
         <Landmark className="size-5 shrink-0 text-gold" aria-hidden="true" />
         {isEnglish ? 'Relevant Courts & Offices' : 'ศาลและหน่วยงานที่เกี่ยวข้อง'}

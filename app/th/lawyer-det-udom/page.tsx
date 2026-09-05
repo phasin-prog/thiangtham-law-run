@@ -154,6 +154,19 @@ export default function LawyerDetUdomPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://www.thiangthamlaw.com/th' },
+              { '@type': 'ListItem', position: 2, name: 'ทนายความเดชอุดม', item: 'https://www.thiangthamlaw.com/th/lawyer-det-udom' },
+            ],
+          }),
+        }}
+      />
 
       <PageHero
         title="ทนายความเดชอุดม"
@@ -324,6 +337,7 @@ export default function LawyerDetUdomPage() {
                   { href: '/th/lawyer-muang-sam-sip', label: 'ทนายความม่วงสามสิบ' },
                   { href: '/th/lawyer-trakan-phuet-phon', label: 'ทนายความตระการพืชผล' },
                   { href: '/th/lawyer-khueang-nai', label: 'ทนายความเขื่องใน' },
+                  { href: '/th/lawyer-near-me', label: 'ทนายใกล้ฉัน 25 อำเภอ' },
                 ].map((district) => (
                   <Link
                     key={district.href}
@@ -336,7 +350,7 @@ export default function LawyerDetUdomPage() {
                 ))}
               </div>
             </div>
-            <CourtLinks locale="th" />
+            <CourtLinks locale="th" district="เดชอุดม" court="ศาลจังหวัดเดชอุดม" />
           </div>
         </Container>
       </section>

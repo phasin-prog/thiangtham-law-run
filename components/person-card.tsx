@@ -44,7 +44,7 @@ export function PersonCard({
       href={getLocalePath(`/team/${person.slug}`, locale)}
       className={cn(
         'group relative flex flex-col overflow-hidden rounded-2xl border border-border/80 bg-card transition-all duration-500 hover:-translate-y-2 hover:border-gold/50 hover:shadow-2xl hover:shadow-gold/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold',
-        featured && 'md:grid md:grid-cols-[0.9fr_1.1fr]'
+        featured && 'lg:grid lg:grid-cols-[0.9fr_1.1fr]'
       )}
     >
       {/* Top subtle gold accent line */}
@@ -53,7 +53,7 @@ export function PersonCard({
       <div
         className={cn(
           'relative aspect-[4/5] w-full overflow-hidden bg-secondary',
-          featured && 'md:aspect-auto md:min-h-[400px]'
+          featured && 'lg:aspect-auto lg:min-h-[400px]'
         )}
       >
         <Image
@@ -66,8 +66,8 @@ export function PersonCard({
         <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       </div>
 
-      <div className={cn('flex flex-1 flex-col p-6', featured && 'md:justify-center md:p-10')}>
-        <h3 className={cn('font-serif text-xl font-bold text-primary transition-colors group-hover:text-gold-ink leading-snug', featured && 'md:text-3xl')}>
+      <div className={cn('flex flex-1 flex-col p-6', featured && 'lg:justify-center lg:p-10')}>
+        <h3 className={cn('font-serif text-xl font-bold text-primary transition-colors group-hover:text-gold-ink leading-snug', featured && 'lg:text-3xl')}>
           {name}
         </h3>
         <div className="mt-2 inline-flex w-fit items-center rounded-md bg-gold/10 px-2.5 py-1 text-xs font-bold text-gold-ink tracking-wide">

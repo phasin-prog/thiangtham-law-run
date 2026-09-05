@@ -142,6 +142,7 @@ export default function EnglishHomePage() {
     <main className="overflow-x-hidden selection:bg-gold/30">
       <HeroSection />
 
+      <div className="hidden md:block">
       <section className="py-16 md:py-20">
         <Container>
           <SectionHeading
@@ -305,6 +306,8 @@ export default function EnglishHomePage() {
           </div>
         </Container>
       </section>
+
+      </div>
 
       <section className="bg-primary py-16 text-primary-foreground md:py-20">
         <Container>

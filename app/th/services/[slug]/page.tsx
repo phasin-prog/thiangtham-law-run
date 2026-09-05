@@ -13,17 +13,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = getLegalService(slug)
   if (!service) return { title: 'ไม่พบบริการ', robots: { index: false, follow: true } }
-  const title = `หาทนาย${service.title} จ้างทนาย ปรึกษากฎหมายออนไลน์ รับว่าความทั่วราชอาณาจักร`
-  const description = `${service.description} ตรวจข้อเท็จจริง ประเมินแนวทาง จัดทำเอกสารและดำเนินคดีโดยทีมทนายประสบการณ์กว่า 19 ปี ปรึกษาเบื้องต้น โทร 082-377-2404`
+  const title = `ทนาย${service.title} รับฟ้องคดี สู้คดี ปรึกษาฟรี ประสบการณ์ 19+ ปี`
+  const description = `${service.description} รับว่าความทั้งฝั่งโจทก์ที่ต้องการฟ้องคดีและฝั่งจำเลยที่ต้องการสู้คดี ตรวจข้อเท็จจริง ประเมินแนวทางโดยทีมทนายประสบการณ์กว่า 19 ปี ปรึกษาเบื้องต้นฟรี โทร 082-377-2404`
   const url = `https://www.thiangthamlaw.com/th/services/${slug}`
   return {
     title,
     description,
     keywords: [
       `หาทนาย${service.title}`,
-      `จ้างทนาย${service.title}`,
+      `ทนาย${service.title}`,
+      `ฟ้อง${service.title}`,
+      `สู้คดี${service.title}`,
+      `ทนายโจทก์${service.title}`,
+      `ทนายจำเลย${service.title}`,
+      `โดนฟ้อง${service.title}`,
       `ปรึกษาทนาย${service.title}`,
       service.title,
+      'ฟ้องคดี',
+      'สู้คดี',
+      'ปรึกษาฟรี',
       'ปรึกษากฎหมายออนไลน์',
       'รับว่าความทั่วราชอาณาจักร',
       ...service.topics.slice(0, 6),

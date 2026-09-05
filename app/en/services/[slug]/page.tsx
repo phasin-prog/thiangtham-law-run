@@ -13,8 +13,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const service = getEnglishLegalService(slug)
   if (!service) return { title: 'Service Not Found', robots: { index: false, follow: true } }
-  const title = `${service.title} — English-Speaking Lawyer in Thailand, Nationwide Representation`
-  const description = `${service.description} Consultation and court representation across Thailand by Thiangtham Law Office, 19+ years of experience. Call +66 82 377 2404`
+  const title = `${service.title} Lawyer: Plaintiff & Defendant Representation in Thailand`
+  const description = `${service.description} Representation for both plaintiffs filing suit and defendants fighting charges, across Thailand by Thiangtham Law Office, 19+ years of experience. Free initial assessment. Call +66 82 377 2404`
   const url = `https://www.thiangthamlaw.com/en/services/${slug}`
   return {
     title,

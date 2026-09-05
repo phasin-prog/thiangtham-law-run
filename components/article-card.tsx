@@ -11,7 +11,8 @@ export function ArticleCard({
   locale?: Locale
 }) {
   return (
-    <article
+    <Link
+      href={getLocalePath(`/articles/${article.slug}`, locale)}
       data-motion-reading=""
       data-motion-depth=""
       className="group flex h-full flex-col rounded-lg border border-border bg-card p-8 shadow-sm transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-1 hover:border-gold/50 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
@@ -41,14 +42,13 @@ export function ArticleCard({
           </div>
           {article.author}
         </div>
-        <Link
-          href={getLocalePath(`/articles/${article.slug}`, locale)}
-        className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-primary transition-colors duration-200 hover:text-gold-ink"
+        <span
+          className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-primary transition-colors duration-200 group-hover:text-gold-ink"
         >
           {locale === 'en' ? 'Read' : 'อ่านต่อ'}
           <ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true" />
-        </Link>
+        </span>
       </div>
-    </article>
+    </Link>
   )
 }

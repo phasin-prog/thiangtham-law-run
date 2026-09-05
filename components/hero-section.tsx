@@ -10,6 +10,7 @@ import { getLocalePath, useTranslation } from '@/lib/i18n'
 const heroHighlights = [
   { th: 'ก่อตั้ง พ.ศ. 2550', en: 'Established in 2007' },
   { th: 'ประสบการณ์มากกว่า 19 ปี', en: 'Over 19 years of experience' },
+  { th: 'ทีมทนาย 9 คน เชี่ยวชาญอรรถคดี', en: '9 lawyers for court cases' },
   { th: 'รับว่าความทั่วราชอาณาจักร', en: 'Nationwide legal representation' },
 ] as const
 
@@ -49,8 +50,8 @@ export function HeroSection() {
 
             <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-primary-foreground/80 sm:text-xl">
               {t(
-                'สำนักกฎหมายเที่ยงธรรมทนายความ ตั้งอยู่ที่อำเภอเดชอุดม จังหวัดอุบลราชธานี ให้บริการปรึกษากฎหมาย ดำเนินคดี และรับว่าความทั่วราชอาณาจักร สำหรับผู้ที่ต้องการทนายความในพื้นที่เดชอุดม อุบลราชธานี และพื้นที่ใกล้เคียง',
-                'Tiangtham Law Office is located in Det Udom, Ubon Ratchathani. We provide legal consultation, litigation, and representation nationwide for clients seeking local lawyers.',
+                'สำนักกฎหมายเที่ยงธรรมทนายความ ตั้งอยู่ที่อำเภอเดชอุดม จังหวัดอุบลราชธานี ให้บริการปรึกษากฎหมาย ดำเนินคดี และรับว่าความทั่วราชอาณาจักร ทั้งฝั่งโจทก์ที่ต้องการฟ้องคดีและฝั่งจำเลยที่ต้องการสู้คดี สำหรับผู้ที่ต้องการทนายความในพื้นที่เดชอุดม อุบลราชธานี และพื้นที่ใกล้เคียง',
+                'Tiangtham Law Office is located in Det Udom, Ubon Ratchathani. We provide legal consultation, litigation, and representation nationwide for both plaintiffs filing suit and defendants fighting charges.',
               )}
             </p>
 

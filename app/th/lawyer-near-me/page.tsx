@@ -336,7 +336,16 @@ export default function LawyerNearMePage() {
                 ))}
               </ul>
             </div>
-            <CourtLinks locale="th" />
+            <div>
+              <CourtLinks locale="th" />
+              <Link
+                href="/th/court-jurisdiction"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary transition hover:text-gold-ink"
+              >
+                ดูตารางเขตศาลทั้ง 25 อำเภอ
+                <ArrowRight className="size-4" aria-hidden="true" />
+              </Link>
+            </div>
           </div>
         </Container>
       </section>

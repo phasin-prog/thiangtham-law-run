@@ -26,7 +26,7 @@ export const englishHomeFaqs = [
   },
   {
     q: 'Is there a fee for an initial consultation?',
-    a: 'Fees depend on the complexity and scope of the matter. We provide transparent fee quotes before any formal engagement.',
+    a: 'No. Initial consultation is free through every channel — phone, LINE, or the website form. Fees apply only if you engage us for further legal work, and we quote them transparently before any formal engagement.',
     category: 'general' as const,
   },
 ]
@@ -35,7 +35,7 @@ export const englishHomeFaqs = [
 export const englishConsultationFaqs = [
   {
     q: 'Does sending the form mean the office has accepted my case?',
-    a: 'No, it does not constitute acceptance of the case. Our team will review the information, contact you, and inform you of the scope of work and costs before any service agreement is made.',
+    a: 'No, it does not constitute acceptance of the case. Our team will review the information, contact you, and inform you of the scope of work and representation fees (only if the case proceeds) before any service agreement is made. The initial consultation itself is free.',
     category: 'general' as const,
   },
   {

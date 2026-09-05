@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const thBasePaths = [
     { path: '/th', priority: 1.0, changeFrequency: 'weekly' as const },
     { path: '/th/lawyer-near-me', priority: 0.95, changeFrequency: 'weekly' as const },
+    { path: '/th/court-jurisdiction', priority: 0.9, changeFrequency: 'monthly' as const },
     { path: '/th/lawyer-det-udom', priority: 0.95, changeFrequency: 'weekly' as const },
     { path: '/th/lawyer-ubon-ratchathani', priority: 0.95, changeFrequency: 'weekly' as const },
     { path: '/th/lawyer-warin-chamrap', priority: 0.9, changeFrequency: 'weekly' as const },

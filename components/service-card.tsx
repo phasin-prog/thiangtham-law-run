@@ -23,7 +23,7 @@ export function ServiceCard({
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-gold/0 to-transparent transition-all duration-500 group-hover:via-gold/70 rounded-t-3xl" />
 
       {/* Decorative subtle background tint on hover */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-transparent via-transparent to-gold/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-3xl" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-gold/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100 rounded-3xl" />
       
       <div className="mb-6 flex size-14 items-center justify-center rounded-2xl bg-gold/10 text-primary transition-all duration-500 group-hover:bg-primary group-hover:text-gold group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-primary/10">
         {Icon && <Icon className="size-7 text-gold-ink group-hover:text-gold transition-colors" aria-hidden="true" />}

@@ -223,6 +223,7 @@ export default function HomePage() {
         </Container>
       </section>
 
+      <div className="hidden md:block">
       <section className="py-16 md:py-20">
         <Container>
           <SectionHeading
@@ -386,6 +387,8 @@ export default function HomePage() {
           </div>
         </Container>
       </section>
+
+      </div>
 
       <section className="bg-primary py-16 text-primary-foreground md:py-20">
         <Container>

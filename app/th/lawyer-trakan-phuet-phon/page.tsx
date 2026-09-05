@@ -112,7 +112,8 @@ const nearbyDistricts = [
   { href: '/th/lawyer-warin-chamrap', label: 'ทนายความวารินชำราบ' },
   { href: '/th/lawyer-phibun-mangsahan', label: 'ทนายความพิบูลมังสาหาร' },
   { href: '/th/lawyer-muang-sam-sip', label: 'ทนายความม่วงสามสิบ' },
-  { href: '/th/lawyer-khueang-nai', label: 'ทนายความเขื่องใน' },
+                  { href: '/th/lawyer-khueang-nai', label: 'ทนายความเขื่องใน' },
+                  { href: '/th/lawyer-near-me', label: 'ทนายใกล้ฉัน 25 อำเภอ' },
 ] as const
 
 export default function LawyerTrakanPhuetPhonPage() {
@@ -159,6 +160,19 @@ export default function LawyerTrakanPhuetPhonPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'หน้าแรก', item: 'https://www.thiangthamlaw.com/th' },
+              { '@type': 'ListItem', position: 2, name: 'ทนายความตระการพืชผล', item: 'https://www.thiangthamlaw.com/th/lawyer-trakan-phuet-phon' },
+            ],
+          }),
+        }}
       />
 
       <PageHero
@@ -331,7 +345,7 @@ export default function LawyerTrakanPhuetPhonPage() {
                 ))}
               </div>
             </div>
-            <CourtLinks locale="th" />
+            <CourtLinks locale="th" district="ตระการพืชผล" court="ศาลจังหวัดอุบลราชธานี" />
           </div>
         </Container>
       </section>
